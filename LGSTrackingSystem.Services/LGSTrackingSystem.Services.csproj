@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DBContext\LGSTrackingDBContext.cs" />
+    <Compile Include="Migrations\202505021443089_initialMigration.cs" />
+    <Compile Include="Migrations\202505021443089_initialMigration.Designer.cs">
+      <DependentUpon>202505021443089_initialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +66,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mappers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LGSTrackingSystem.Domain\LGSTrackingSystem.Domain.csproj">
+      <Project>{062F9E62-79CE-4C71-AA97-2D1999025C75}</Project>
+      <Name>LGSTrackingSystem.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202505021443089_initialMigration.resx">
+      <DependentUpon>202505021443089_initialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,0 +1,12 @@
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\LGSTrackingSystem.Repositories.pdb
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\obj\Debug\LGSTrackingSystem.Repositories.csproj.AssemblyReference.cache
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\obj\Debug\LGSTrackingSystem.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\obj\Debug\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\obj\Debug\LGSTrackingSystem.Repositories.pdb
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\LGSTrackingSystem.Repositories.dll.config
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Repositories\obj\Debug\LGSTrack.735F3C8F.Up2Date
