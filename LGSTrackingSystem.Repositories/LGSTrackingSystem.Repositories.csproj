@@ -51,12 +51,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Repositories\AdminRepository.cs" />
+    <Compile Include="Repositories\ExamRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\StudentRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LGSTrackingSystem.Domain\LGSTrackingSystem.Domain.csproj">
+      <Project>{062F9E62-79CE-4C71-AA97-2D1999025C75}</Project>
+      <Name>LGSTrackingSystem.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LGSTrackingSystem.Services\LGSTrackingSystem.Services.csproj">
+      <Project>{0B7D3225-4AA6-48CA-9385-CF7F8C6695F6}</Project>
+      <Name>LGSTrackingSystem.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
