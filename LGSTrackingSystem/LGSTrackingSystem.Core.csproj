@@ -82,6 +82,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pages\AdminPage.resx">
+      <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StudentPage.resx">
+      <DependentUpon>StudentPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,7 +114,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LGSTrackingSystem.Domain\LGSTrackingSystem.Domain.csproj">
+      <Project>{062F9E62-79CE-4C71-AA97-2D1999025C75}</Project>
+      <Name>LGSTrackingSystem.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LGSTrackingSystem.Repositories\LGSTrackingSystem.Repositories.csproj">
+      <Project>{BD6F9DF7-A4FE-4C4C-B9B2-0B29A7DCBEE2}</Project>
+      <Name>LGSTrackingSystem.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LGSTrackingSystem.Services\LGSTrackingSystem.Services.csproj">
+      <Project>{0B7D3225-4AA6-48CA-9385-CF7F8C6695F6}</Project>
+      <Name>LGSTrackingSystem.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

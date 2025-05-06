@@ -44,5 +44,11 @@ namespace LGSTrackingSystem.Repositories.Repositories
             await _service.UpdateAsync();
         }
 
+        public async Task<Student> GetStudentByUserIdAsync(int userId)
+        {
+            if (_service is StudentService service)
+                return await service.GetStudentByUserIdAsync(userId);
+            throw new InvalidOperationException("Service is not of type StudentService.");
+        }
     }
 }

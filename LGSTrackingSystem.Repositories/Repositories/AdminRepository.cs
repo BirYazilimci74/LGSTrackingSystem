@@ -44,5 +44,12 @@ namespace LGSTrackingSystem.Repositories.Repositories
 
             await _sevice.UpdateAsync();
         }
+
+        public async Task<Admin> GetAdminByUserIdAsync(int userId)
+        {
+            if (_sevice is AdminService service)
+                return await service.GetAdminByUserId(userId);
+            throw new InvalidOperationException("Service is not of type AdminService.");
+        }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using LGSTrackingSystem.Domain.Models;
+using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace LGSTrackingSystem.Services.Services
 {
@@ -7,6 +9,11 @@ namespace LGSTrackingSystem.Services.Services
         public StudentService(LGSTrackingDBContext context) : base(context)
         {
 
+        }
+
+        public async Task<Student> GetStudentByUserIdAsync(int userId)
+        {
+            return await _context.Students.FirstOrDefaultAsync(s => s.UserId == userId);
         }
     }
 }

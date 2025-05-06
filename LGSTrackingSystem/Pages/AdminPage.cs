@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Models;
 using System.Windows.Forms;
 
 namespace LGSTrackingSystem.Pages
 {
     public partial class AdminPage : Form
     {
-        public AdminPage()
+        private readonly Admin _admin;
+        public AdminPage(Admin admin)
         {
+            _admin = admin;
             InitializeComponent();
+        }
+
+        private void AdminPage_Load(object sender, System.EventArgs e)
+        {
+            label1.Text = $"Welcome, {_admin.FirstName} {_admin.LastName}";
         }
     }
 }

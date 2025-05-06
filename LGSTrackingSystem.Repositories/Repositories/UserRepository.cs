@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using LGSTrackingSystem.Domain.Models;
 using LGSTrackingSystem.Services.Services;
 
 namespace LGSTrackingSystem.Repositories.Repositories
 {
-    internal class UserRepository : IRepository<User>
+    public class UserRepository : IRepository<User>
     {
         private readonly Service<User> _service;
         public UserRepository(Service<User> service)
@@ -38,6 +39,13 @@ namespace LGSTrackingSystem.Repositories.Repositories
             existingUser.Role = entity.Role;
 
             await _service.UpdateAsync();
+        }
+
+        public async Task<User> GetUserByUsernameAndPasswordAsync(string username, string password)
+        {
+            if (_service is UserService service)
+                return await service.GetUserByUsernameAndPasswordAsync(username, password);
+            throw new InvalidOperationException("Service is not of type UserService.");
         }
     }
 }
