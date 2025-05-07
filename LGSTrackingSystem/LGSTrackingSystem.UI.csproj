@@ -14,4 +14,8 @@
     <ProjectReference Include="..\LGSTrackingSystem.Services\LGSTrackingSystem.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
 </Project>

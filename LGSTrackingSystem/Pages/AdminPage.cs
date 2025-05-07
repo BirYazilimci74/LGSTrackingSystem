@@ -14,7 +14,7 @@ namespace LGSTrackingSystem.Pages
 
         private void AdminPage_Load(object sender, System.EventArgs e)
         {
-            label1.Text = $"Welcome, {_admin.FirstName} {_admin.LastName}";
+            this.Text = $"Welcome, {_admin.FirstName} {_admin.LastName}";
         }
     }
 }

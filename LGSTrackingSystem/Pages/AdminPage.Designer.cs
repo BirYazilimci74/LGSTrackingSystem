@@ -28,39 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            SuspendLayout();
             // 
             // AdminPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 460);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "AdminPage";
-            this.ShowIcon = false;
-            this.Text = "AdminPage";
-            this.Load += new System.EventHandler(this.AdminPage_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(6F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(786, 460);
+            Font = new Font("Myanmar Text", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(3, 5, 3, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "AdminPage";
+            ShowIcon = false;
+            Text = "AdminPage";
+            Load += AdminPage_Load;
+            ResumeLayout(false);
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
     }
 }

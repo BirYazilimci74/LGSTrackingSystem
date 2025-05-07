@@ -28,39 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            tbCtrl = new TabControl();
+            tabPage1 = new TabPage();
+            dgwExamList = new DataGridView();
+            tabPage2 = new TabPage();
+            label2 = new Label();
+            btnAddExam = new Button();
+            tbCtrl.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
+            tabPage2.SuspendLayout();
+            SuspendLayout();
             // 
-            // label1
+            // tbCtrl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(378, 208);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            tbCtrl.Controls.Add(tabPage1);
+            tbCtrl.Controls.Add(tabPage2);
+            tbCtrl.Dock = DockStyle.Fill;
+            tbCtrl.Location = new Point(0, 0);
+            tbCtrl.Name = "tbCtrl";
+            tbCtrl.SelectedIndex = 0;
+            tbCtrl.Size = new Size(797, 481);
+            tbCtrl.TabIndex = 2;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(btnAddExam);
+            tabPage1.Controls.Add(dgwExamList);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(789, 448);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Exams";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // dgwExamList
+            // 
+            dgwExamList.AllowUserToAddRows = false;
+            dgwExamList.AllowUserToDeleteRows = false;
+            dgwExamList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgwExamList.BackgroundColor = Color.White;
+            dgwExamList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwExamList.Dock = DockStyle.Top;
+            dgwExamList.Location = new Point(3, 3);
+            dgwExamList.Name = "dgwExamList";
+            dgwExamList.RowHeadersVisible = false;
+            dgwExamList.ShowEditingIcon = false;
+            dgwExamList.Size = new Size(783, 390);
+            dgwExamList.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(label2);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(789, 453);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "My Profile";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(333, 140);
+            label2.Name = "label2";
+            label2.Size = new Size(40, 20);
+            label2.TabIndex = 0;
+            label2.Text = "label2";
+            // 
+            // btnAddExam
+            // 
+            btnAddExam.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddExam.Location = new Point(741, 399);
+            btnAddExam.Name = "btnAddExam";
+            btnAddExam.Size = new Size(40, 40);
+            btnAddExam.TabIndex = 1;
+            btnAddExam.Text = "+";
+            btnAddExam.UseVisualStyleBackColor = true;
+            btnAddExam.Click += btnAddExam_Click;
             // 
             // StudentPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 481);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "StudentPage";
-            this.ShowIcon = false;
-            this.Text = "StudentPage";
-            this.Load += new System.EventHandler(this.StudentPage_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(6F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(797, 481);
+            Controls.Add(tbCtrl);
+            Font = new Font("Myanmar Text", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(3, 5, 3, 5);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "StudentPage";
+            ShowIcon = false;
+            Text = "StudentPage";
+            Load += StudentPage_Load;
+            tbCtrl.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgwExamList).EndInit();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private TabControl tbCtrl;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
+        private Label label2;
+        private DataGridView dgwExamList;
+        private Button btnAddExam;
     }
 }

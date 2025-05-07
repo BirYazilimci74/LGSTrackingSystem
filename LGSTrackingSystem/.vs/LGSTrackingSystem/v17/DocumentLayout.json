@@ -1,15 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\yahya\\Desktop\\Software\\C#\\Form Uygulamalar\u0131\\LGSTrackingSystem\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\studentpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\studentpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\studentpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\studentpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 818,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,11 +43,87 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\LoginPage.cs",
+              "RelativeDocumentMoniker": "Pages\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\LoginPage.cs",
+              "RelativeToolTip": "Pages\\LoginPage.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwDAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T13:55:04.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentPage.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\StudentPage.cs",
+              "RelativeDocumentMoniker": "Pages\\StudentPage.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\StudentPage.cs",
+              "RelativeToolTip": "Pages\\StudentPage.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T10:42:59.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\StudentPage.cs",
+              "RelativeDocumentMoniker": "Pages\\StudentPage.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\StudentPage.cs [Design]",
+              "RelativeToolTip": "Pages\\StudentPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T13:14:49.882Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExamPage.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs",
+              "RelativeDocumentMoniker": "Pages\\ExamPage.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs",
+              "RelativeToolTip": "Pages\\ExamPage.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwD8AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T12:03:17.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExamPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs",
+              "RelativeDocumentMoniker": "Pages\\ExamPage.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs [Design]",
+              "RelativeToolTip": "Pages\\ExamPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T11:58:52.665Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T11:10:14.425Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 200,
+          "DockedWidth": 382,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -40,7 +141,7 @@
           ]
         },
         {
-          "DockedHeight": 763,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -50,7 +151,7 @@
           ]
         },
         {
-          "DockedHeight": 763,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {
