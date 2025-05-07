@@ -1,35 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Interfaces;
 using LGSTrackingSystem.Domain.Models;
-using LGSTrackingSystem.Services.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace LGSTrackingSystem.Repositories.Repositories
 {
     public class UserRepository : IRepository<User>
     {
-        private readonly Service<User> _service;
-        public UserRepository(Service<User> service)
+        private readonly LGSTrackingDBContext _context;
+
+        public UserRepository(LGSTrackingDBContext context)
         {
-            _service = service;
+            _context = context;
         }
+
         public void Add(User entity)
         {
-            _service.Add(entity);
+            _context.Add(entity);
+            _context.SaveChanges();
         }
+
         public async Task<List<User>> GetAllAsync()
         {
-            return await _service.GetAllAsync();
+            return await _context.Users.ToListAsync();
         }
-        public Task<User> GetByIdAsync(int id)
+
+        public async Task<User?> GetByIdAsync(int id)
         {
-            return _service.GetByIdAsync(id);
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
         }
+
         public async Task UpdateAsync(int id, User entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
-            var existingUser = await _service.GetByIdAsync(id);
+            var existingUser = await GetByIdAsync(id);
             if (existingUser == null)
             {
                 throw new ArgumentException($"User with ID {id} not found.");
@@ -38,14 +41,13 @@ namespace LGSTrackingSystem.Repositories.Repositories
             existingUser.Password = entity.Password;
             existingUser.Role = entity.Role;
 
-            await _service.UpdateAsync();
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<User> GetUserByUsernameAndPasswordAsync(string username, string password)
+        public async Task<User?> GetUserByUsernameAndPasswordAsync(string username, string password)
         {
-            if (_service is UserService service)
-                return await service.GetUserByUsernameAndPasswordAsync(username, password);
-            throw new InvalidOperationException("Service is not of type UserService.");
+            return await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
         }
     }
 }

@@ -1,19 +1,26 @@
-﻿using LGSTrackingSystem.Domain.Models;
-using System.Data.Entity;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Interfaces;
+using LGSTrackingSystem.Domain.Models;
+using LGSTrackingSystem.Repositories;
+using LGSTrackingSystem.Repositories.Repositories;
 
 namespace LGSTrackingSystem.Services.Services
 {
-    public class StudentService : Service<Student>
+    public class StudentService
     {
-        public StudentService(LGSTrackingDBContext context) : base(context)
-        {
+        private readonly LGSTrackingDBContext _dbContext;
+        private readonly IRepository<Student> _studentRepository;
 
+        public StudentService()
+        {
+            _dbContext = new LGSTrackingDBContext();
+            _studentRepository = new StudentRepository(_dbContext);
         }
 
-        public async Task<Student> GetStudentByUserIdAsync(int userId)
+        public async Task<Student?> GetStudentByUserIdAsync(int userId)
         {
-            return await _context.Students.FirstOrDefaultAsync(s => s.UserId == userId);
+            if (_studentRepository is StudentRepository repository)
+                return await repository.GetStudentByUserIdAsync(userId);
+            return null;
         }
     }
 }

@@ -1,0 +1,17 @@
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.AssemblyInfoInputs.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.AssemblyInfo.cs
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\bin\Debug\net8.0\LGSTrackingSystem.Repositories.deps.json
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\bin\Debug\net8.0\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\bin\Debug\net8.0\LGSTrackingSystem.Repositories.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\bin\Debug\net8.0\LGSTrackingSystem.Domain.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\bin\Debug\net8.0\LGSTrackingSystem.Domain.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.csproj.AssemblyReference.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrack.735F3C8F.Up2Date
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\refint\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\ref\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\bin\Debug\net8.0\LGSTrackingSystem.Repositories.runtimeconfig.json
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Repositories\obj\Debug\net8.0\LGSTrackingSystem.Repositories.genruntimeconfig.cache

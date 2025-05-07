@@ -1,34 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Interfaces;
 using LGSTrackingSystem.Domain.Models;
-using LGSTrackingSystem.Services.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace LGSTrackingSystem.Repositories.Repositories
 {
     public class StudentRepository : IRepository<Student>
     {
-        private readonly Service<Student> _service;
-        public StudentRepository(Service<Student> service)
+        private readonly LGSTrackingDBContext _context;
+
+        public StudentRepository(LGSTrackingDBContext context)
         {
-            _service = service;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
+
         public void Add(Student entity)
         {
-            _service.Add(entity);
+            _context.Add(entity);
+            _context.SaveChanges();
         }
+
         public async Task<List<Student>> GetAllAsync()
         {
-            return await _service.GetAllAsync();
+            return await _context.Students
+                .Include(s => s.User)
+                .Include(s => s.Exams)
+                .ToListAsync();
         }
-        public async Task<Student> GetByIdAsync(int id)
+
+        public async Task<Student?> GetByIdAsync(int id)
         {
-            return await _service.GetByIdAsync(id);
+            return await _context.Students
+                .Include(s => s.User)
+                .Include(s => s.Exams)
+                .FirstOrDefaultAsync(s => s.Id == id);
         }
+
         public async Task UpdateAsync(int id, Student entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
-            var existingEntity = await _service.GetByIdAsync(id);
+            var existingEntity = await GetByIdAsync(id);
             if (existingEntity == null) throw new ArgumentException($"Student '{entity.FirstName}' not found.");
             
             existingEntity.FirstName = entity.FirstName;
@@ -41,14 +51,15 @@ namespace LGSTrackingSystem.Repositories.Repositories
             existingEntity.User = entity.User;
             existingEntity.Exams = entity.Exams;
 
-            await _service.UpdateAsync();
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<Student> GetStudentByUserIdAsync(int userId)
+        public async Task<Student?> GetStudentByUserIdAsync(int userId)
         {
-            if (_service is StudentService service)
-                return await service.GetStudentByUserIdAsync(userId);
-            throw new InvalidOperationException("Service is not of type StudentService.");
+            return await _context.Students
+                .Include(s => s.User)
+                .Include(s => s.Exams)
+                .FirstOrDefaultAsync(s => s.UserId == userId);
         }
     }
 }

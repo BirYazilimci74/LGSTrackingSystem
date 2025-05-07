@@ -1,8 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LGSTrackingSystem.Domain.Models;
-using LGSTrackingSystem.Repositories;
+﻿using LGSTrackingSystem.Domain.Models;
 using LGSTrackingSystem.Repositories.Repositories;
 using LGSTrackingSystem.Services.Services;
 
@@ -10,16 +6,19 @@ namespace LGSTrackingSystem.Pages
 {
     public partial class LoginPage : Form
     {
-        private readonly IRepository<User> _userRepository = new UserRepository(new UserService(new Services.LGSTrackingDBContext()));
-        private readonly IRepository<Student> _studentRepository = new StudentRepository(new StudentService(new Services.LGSTrackingDBContext()));
-        private readonly IRepository<Admin> _adminRepository = new AdminRepository(new AdminService(new Services.LGSTrackingDBContext()));
+        private readonly UserService _userService;
+        private readonly StudentService _studentService;
+        private readonly AdminService _adminService;
 
-        public User User { get; set; }
-        public Student Student { get; set; }
-        public Admin Admin { get; set; }
+        public User? User { get; set; }
+        public Student? Student { get; set; }
+        public Admin? Admin { get; set; }
 
         public LoginPage()
         {
+            _userService = new UserService();
+            _studentService = new StudentService();
+            _adminService = new AdminService();
             InitializeComponent();
         }
 
@@ -37,12 +36,11 @@ namespace LGSTrackingSystem.Pages
 
         private async Task NavigateToMainPageAsync()
         {
+            User = await _userService.CheckCredentialsAsync(tbxUsername.Text, tbxPassword.Text);
 
-            if (await CheckCredentialsAsync(tbxUsername.Text, tbxPassword.Text))
+            if (User is not null)
             {
-                Student = _studentRepository is StudentRepository studentRepository
-                    ? await studentRepository.GetStudentByUserIdAsync(User.Id)
-                    : null;
+                Student = await _studentService.GetStudentByUserIdAsync(User.Id);
 
                 if (Student != null)
                 {
@@ -52,9 +50,7 @@ namespace LGSTrackingSystem.Pages
                     return;
                 }
 
-                Admin = _adminRepository is AdminRepository admniRepository
-                    ? await admniRepository.GetAdminByUserIdAsync(User.Id)
-                    : null;
+                Admin = await _adminService.GetAdminByUserIdAsync(User.Id);
 
                 if (Admin != null)
                 {
@@ -66,20 +62,6 @@ namespace LGSTrackingSystem.Pages
             }
 
             MessageBox.Show("User not found. Please try again.");
-        }
-
-        private async Task<bool> CheckCredentialsAsync(string username, string password)
-        {
-            User user = null;
-            if (_userRepository is UserRepository repository)
-                user = await repository.GetUserByUsernameAndPasswordAsync(username, password);
-            if (user != null)
-            {
-                User = user;
-                return username == user.Username && password == user.Password;
-            }
-                
-            return false;
         }
 
         private bool CheckEmptyFields()

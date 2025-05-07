@@ -1,38 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Interfaces;
 using LGSTrackingSystem.Domain.Models;
-using LGSTrackingSystem.Services.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace LGSTrackingSystem.Repositories.Repositories
 {
     public class AdminRepository : IRepository<Admin>
     {
-        private readonly Service<Admin> _sevice;
-        public AdminRepository(Service<Admin> service)
+        private readonly LGSTrackingDBContext _context;
+
+        public AdminRepository(LGSTrackingDBContext context)
         {
-            _sevice = service;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public void Add(Admin entity)
         {
-            _sevice.Add(entity);
+            _context.Add(entity);
+            _context.SaveChanges();
         }
 
         public async Task<List<Admin>> GetAllAsync()
         {
-            return await _sevice.GetAllAsync();
+            return await _context.Admins
+                .Include(a => a.User)
+                .ToListAsync();
         }
 
-        public async Task<Admin> GetByIdAsync(int id)
+        public async Task<Admin?> GetByIdAsync(int id)
         {
-            return await _sevice.GetByIdAsync(id);
+            return await _context.Admins
+                .Include(a => a.User)
+                .FirstOrDefaultAsync(a => a.Id == id);
         }
 
         public async Task UpdateAsync(int id, Admin entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
-            var existingEntity = await _sevice.GetByIdAsync(id);
+            var existingEntity = await GetByIdAsync(id);
             if (existingEntity == null) throw new ArgumentException($"Admin '{entity.FirstName}' not found.");
 
             existingEntity.FirstName = entity.FirstName;
@@ -42,14 +46,14 @@ namespace LGSTrackingSystem.Repositories.Repositories
             existingEntity.UserId = entity.UserId;
             existingEntity.User = entity.User;
 
-            await _sevice.UpdateAsync();
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<Admin> GetAdminByUserIdAsync(int userId)
+        public async Task<Admin?> GetAdminByUserIdAsync(int userId)
         {
-            if (_sevice is AdminService service)
-                return await service.GetAdminByUserId(userId);
-            throw new InvalidOperationException("Service is not of type AdminService.");
+            return await _context.Admins
+                .Include(a => a.User)
+                .FirstOrDefaultAsync(a => a.UserId == userId);
         }
     }
 }

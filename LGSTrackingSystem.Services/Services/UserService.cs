@@ -1,20 +1,26 @@
-﻿using LGSTrackingSystem.Domain.Models;
-using System;
-using System.Data.Entity;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Interfaces;
+using LGSTrackingSystem.Domain.Models;
+using LGSTrackingSystem.Repositories;
+using LGSTrackingSystem.Repositories.Repositories;
 
 namespace LGSTrackingSystem.Services.Services
 {
-    public class UserService : Service<User>
+    public class UserService
     {
-        public UserService(LGSTrackingDBContext context) : base(context)
-        {
+        private readonly LGSTrackingDBContext _dbContext;
+        private readonly IRepository<User> _userRepository;
 
+        public UserService()
+        {
+            _dbContext = new LGSTrackingDBContext();
+            _userRepository = new UserRepository(_dbContext);
         }
 
-        public async Task<User> GetUserByUsernameAndPasswordAsync(string username, string password)
+        public async Task<User?> CheckCredentialsAsync(string username, string password)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
+            if (_userRepository is UserRepository repository)
+                return await repository.GetUserByUsernameAndPasswordAsync(username, password);
+            return null;
         }
     }
 }

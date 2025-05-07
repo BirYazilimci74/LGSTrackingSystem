@@ -1,38 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using LGSTrackingSystem.Domain.Interfaces;
 using LGSTrackingSystem.Domain.Models;
-using LGSTrackingSystem.Services.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace LGSTrackingSystem.Repositories.Repositories
 {
     public class ExamRepository : IRepository<Exam>
     {
-        private readonly Service<Exam> _service;
-        public ExamRepository(Service<Exam> service)
+        private readonly LGSTrackingDBContext _context;
+
+        public ExamRepository(LGSTrackingDBContext context)
         {
-            _service = service;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public void Add(Exam entity)
         {
-            _service.Add(entity);
+            _context.Add(entity);
+            _context.SaveChanges();
         }
 
         public async Task<List<Exam>> GetAllAsync()
         {
-            return await _service.GetAllAsync();
+            return await _context.Exams
+                .Include(e => e.Student)
+                .ToListAsync();
         }
 
-        public async Task<Exam> GetByIdAsync(int id)
+        public async Task<Exam?> GetByIdAsync(int id)
         {
-            return await _service.GetByIdAsync(id);
+            return await _context.Exams
+                .Include(e => e.Student)
+                .FirstOrDefaultAsync(e => e.Id == id);
         }
 
         public async Task UpdateAsync(int id, Exam entity)
         {
             if (entity == null) throw new ArgumentNullException(nameof(entity));
-            var existingEntity = await _service.GetByIdAsync(id);
+            var existingEntity = await GetByIdAsync(id);
             if (existingEntity == null) throw new ArgumentException($"Exam of {entity.Student.FirstName} with {id} not found.");
             
             existingEntity.ExamDate = entity.ExamDate;
@@ -65,7 +69,7 @@ namespace LGSTrackingSystem.Repositories.Repositories
             existingEntity.StudentId = entity.StudentId;
             existingEntity.Student = entity.Student;
 
-            await _service.UpdateAsync();
+            await _context.SaveChangesAsync();
         }
     }
 }

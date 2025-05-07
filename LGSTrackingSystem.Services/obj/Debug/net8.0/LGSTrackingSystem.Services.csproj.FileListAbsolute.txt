@@ -1,0 +1,17 @@
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Services.deps.json
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Services.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Services.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.AssemblyInfoInputs.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.AssemblyInfo.cs
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.csproj.CoreCompileInputs.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\refint\LGSTrackingSystem.Services.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\ref\LGSTrackingSystem.Services.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Domain.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Domain.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Repositories.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.csproj.AssemblyReference.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrack.86AA4F3C.Up2Date

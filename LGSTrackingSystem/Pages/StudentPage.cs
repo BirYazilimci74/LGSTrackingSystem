@@ -1,5 +1,4 @@
 ﻿using LGSTrackingSystem.Domain.Models;
-using System.Windows.Forms;
 
 namespace LGSTrackingSystem.Pages
 {
@@ -12,7 +11,7 @@ namespace LGSTrackingSystem.Pages
             InitializeComponent();
         }
 
-        private void StudentPage_Load(object sender, System.EventArgs e)
+        private void StudentPage_Load(object sender, EventArgs e)
         {
             label1.Text = $"Welcome, {_student.FirstName} {_student.LastName}";
         }

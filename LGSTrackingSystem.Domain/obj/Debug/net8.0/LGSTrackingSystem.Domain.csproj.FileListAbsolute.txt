@@ -1,0 +1,11 @@
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\bin\Debug\net8.0\LGSTrackingSystem.Domain.deps.json
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\bin\Debug\net8.0\LGSTrackingSystem.Domain.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\bin\Debug\net8.0\LGSTrackingSystem.Domain.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\LGSTrackingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\LGSTrackingSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\LGSTrackingSystem.Domain.AssemblyInfo.cs
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\LGSTrackingSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\LGSTrackingSystem.Domain.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\refint\LGSTrackingSystem.Domain.dll
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\LGSTrackingSystem.Domain.pdb
+C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Domain\obj\Debug\net8.0\ref\LGSTrackingSystem.Domain.dll
