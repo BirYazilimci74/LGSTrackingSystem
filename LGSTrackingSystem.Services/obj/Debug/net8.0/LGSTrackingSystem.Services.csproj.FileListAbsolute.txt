@@ -18,8 +18,10 @@ C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem.Services
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Services.deps.json
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Services.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Services.pdb
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Core.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Domain.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Repositories.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Core.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Domain.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Repositories.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.csproj.AssemblyReference.cache
@@ -33,5 +35,3 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\obj\Debug\ne
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\obj\Debug\net8.0\refint\LGSTrackingSystem.Services.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\obj\Debug\net8.0\LGSTrackingSystem.Services.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\obj\Debug\net8.0\ref\LGSTrackingSystem.Services.dll
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Core.dll
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Services\bin\Debug\net8.0\LGSTrackingSystem.Core.pdb

@@ -22,5 +22,38 @@ namespace LGSTrackingSystem.Services.Services
                 return await repository.GetStudentByUserIdAsync(userId);
             return null;
         }
+
+        public async Task<List<Student>> GetAllStudentsAsync()
+        {
+            return await _studentRepository.GetAllAsync();
+        }
+
+        public async Task<Student?> GetStudentByIdAsync(int id)
+        {
+            return await _studentRepository.GetByIdAsync(id);
+        }
+
+        public void AddStudent(Student student)
+        {
+            _studentRepository.Add(student);
+        }
+
+        public async Task<List<Exam>> GetExamsFromStudent(int studentId)
+        {
+            var student = await _studentRepository.GetByIdAsync(studentId);
+            if (student != null)
+            {
+                return student.Exams;
+            }
+            return new List<Exam>()
+            {
+                new Exam()
+                {
+                    Id = 0,
+                    ExamDate = DateTime.Now,
+                    EnteredBy = "No exams found",
+                }
+            };       
+        }
     }
 }

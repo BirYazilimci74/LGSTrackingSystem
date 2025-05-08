@@ -21,7 +21,7 @@ namespace LGSTrackingSystem.Pages
             InitializeComponent();
         }
 
-        private async Task AddExam()
+        private void AddExam()
         {
             var newExam = new Exam
             {
@@ -54,12 +54,12 @@ namespace LGSTrackingSystem.Pages
                 StudentId = _student.Id,
                 Student = _student
             };
-            await _examService.AddExamToStudentAsync(_student, newExam);
+            _examService.AddExamToStudent(_student, newExam);
         }
 
-        private async void btnOK_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            await AddExam();
+            AddExam();
             MessageBox.Show("Exam added successfully.");
             this.DialogResult = DialogResult.OK;
         }

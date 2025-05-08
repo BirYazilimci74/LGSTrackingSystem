@@ -14,10 +14,10 @@ namespace LGSTrackingSystem.Services.Services
             _examRepository = new ExamRepository(new LGSTrackingDBContext());
         }
 
-        public async Task AddExamToStudentAsync(Student student,Exam newExam)
+        public void AddExamToStudent(Student student,Exam newExam)
         {
             if (_examRepository is ExamRepository repository)
-                await repository.AddExamToStudentAsync(student, newExam);
+                repository.AddExamToStudentAsync(student, newExam);
         }
     }
 }

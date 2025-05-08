@@ -116,14 +116,17 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Core.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Domain.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Repositories.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Services.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Domain.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Repositories.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Services.pdb
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Core.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.csproj.AssemblyReference.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.AdminPage.resources
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.ExamPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.LoginPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.RegisterPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.StudentPage.resources
@@ -139,6 +142,3 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.genruntimeconfig.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\ref\LGSTrackingSystem.UI.dll
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Core.dll
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Core.pdb
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.ExamPage.resources

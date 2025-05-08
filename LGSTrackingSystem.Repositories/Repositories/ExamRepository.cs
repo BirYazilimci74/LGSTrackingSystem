@@ -72,7 +72,7 @@ namespace LGSTrackingSystem.Repositories.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task AddExamToStudentAsync(Student student, Exam newExam)
+        public async void AddExamToStudentAsync(Student student, Exam newExam)
         {
             if (student == null) throw new ArgumentNullException(nameof(student));
             if (newExam == null) throw new ArgumentNullException(nameof(newExam));
@@ -84,7 +84,7 @@ namespace LGSTrackingSystem.Repositories.Repositories
             if (existingStudent == null) throw new ArgumentException($"Student with ID {student.Id} not found.");
             
             existingStudent.Exams.Add(newExam);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
     }
 }
