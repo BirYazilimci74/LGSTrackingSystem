@@ -1,8 +1,6 @@
-﻿using LGSTrackingSystem.Core.DTOs;
-using LGSTrackingSystem.Domain.Models;
+﻿using LGSTrackingSystem.Domain.Models;
 using LGSTrackingSystem.Services.Mappers;
 using LGSTrackingSystem.Services.Services;
-using System.ComponentModel;
 
 namespace LGSTrackingSystem.Pages
 {
@@ -18,11 +16,10 @@ namespace LGSTrackingSystem.Pages
             _studentService = new StudentService();
         }
 
-        private async void StudentPage_Load(object sender, EventArgs e)
+        private void StudentPage_Load(object sender, EventArgs e)
         {
             this.Text = $"Welcome, {_student.FirstName} {_student.LastName}";
-            _exams = await _studentService.GetExamsFromStudent(_student.Id);
-            dgwExamList.DataSource = _exams.Select(e => e.ToExamResultDTO()).ToList();
+            LoadExamResults();
         }
 
         private void btnAddExam_Click(object sender, EventArgs e)

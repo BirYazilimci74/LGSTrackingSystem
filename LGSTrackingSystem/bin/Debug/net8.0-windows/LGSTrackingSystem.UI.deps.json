@@ -541,6 +541,9 @@
         }
       },
       "LGSTrackingSystem.Core/1.0.0": {
+        "dependencies": {
+          "LGSTrackingSystem.Domain": "1.0.0"
+        },
         "runtime": {
           "LGSTrackingSystem.Core.dll": {
             "assemblyVersion": "1.0.0",

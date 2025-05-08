@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LGSTrackingSystem.Domain\LGSTrackingSystem.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

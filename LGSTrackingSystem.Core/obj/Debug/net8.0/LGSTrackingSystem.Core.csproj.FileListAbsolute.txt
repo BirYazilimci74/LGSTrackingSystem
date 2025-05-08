@@ -21,3 +21,7 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\obj\Debug\net8.0
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\obj\Debug\net8.0\refint\LGSTrackingSystem.Core.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\obj\Debug\net8.0\LGSTrackingSystem.Core.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\obj\Debug\net8.0\ref\LGSTrackingSystem.Core.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\bin\Debug\net8.0\LGSTrackingSystem.Domain.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\bin\Debug\net8.0\LGSTrackingSystem.Domain.pdb
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\obj\Debug\net8.0\LGSTrackingSystem.Core.csproj.AssemblyReference.cache
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem.Core\obj\Debug\net8.0\LGSTrack.31901A8F.Up2Date

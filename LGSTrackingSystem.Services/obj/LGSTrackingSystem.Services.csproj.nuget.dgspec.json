@@ -32,7 +32,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem.Domain\\LGSTrackingSystem.Domain.csproj": {
+                "projectPath": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem.Domain\\LGSTrackingSystem.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

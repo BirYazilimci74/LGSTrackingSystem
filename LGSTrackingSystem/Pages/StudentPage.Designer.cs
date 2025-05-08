@@ -30,10 +30,10 @@
         {
             tbCtrl = new TabControl();
             tabPage1 = new TabPage();
+            btnAddExam = new Button();
             dgwExamList = new DataGridView();
             tabPage2 = new TabPage();
             label2 = new Label();
-            btnAddExam = new Button();
             tbCtrl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
@@ -63,6 +63,17 @@
             tabPage1.Text = "Exams";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnAddExam
+            // 
+            btnAddExam.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddExam.Location = new Point(741, 399);
+            btnAddExam.Name = "btnAddExam";
+            btnAddExam.Size = new Size(40, 40);
+            btnAddExam.TabIndex = 1;
+            btnAddExam.Text = "+";
+            btnAddExam.UseVisualStyleBackColor = true;
+            btnAddExam.Click += btnAddExam_Click;
+            // 
             // dgwExamList
             // 
             dgwExamList.AllowUserToAddRows = false;
@@ -74,6 +85,7 @@
             dgwExamList.Location = new Point(3, 3);
             dgwExamList.Name = "dgwExamList";
             dgwExamList.RowHeadersVisible = false;
+            dgwExamList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgwExamList.ShowEditingIcon = false;
             dgwExamList.Size = new Size(783, 390);
             dgwExamList.TabIndex = 0;
@@ -97,17 +109,6 @@
             label2.Size = new Size(40, 20);
             label2.TabIndex = 0;
             label2.Text = "label2";
-            // 
-            // btnAddExam
-            // 
-            btnAddExam.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddExam.Location = new Point(741, 399);
-            btnAddExam.Name = "btnAddExam";
-            btnAddExam.Size = new Size(40, 40);
-            btnAddExam.TabIndex = 1;
-            btnAddExam.Text = "+";
-            btnAddExam.UseVisualStyleBackColor = true;
-            btnAddExam.Click += btnAddExam_Click;
             // 
             // StudentPage
             // 

@@ -22,5 +22,11 @@ namespace LGSTrackingSystem.Services.Services
                 return await repository.GetUserByUsernameAndPasswordAsync(username, password);
             return null;
         }
+
+        public int AddUser(User user)
+        {
+            _userRepository.Add(user);
+            return user.Id;
+        }
     }
 }
