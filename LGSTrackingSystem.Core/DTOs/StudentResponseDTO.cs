@@ -3,6 +3,7 @@
 namespace LGSTrackingSystem.Core.DTOs
 {
     public record StudentResponseDTO(
+        int Id,
         string FirstName,
         string LastName,
         string Email,

@@ -8,6 +8,7 @@ namespace LGSTrackingSystem.Services.Mappers
         public static StudentResponseDTO ToStudentResponseDTO(this Student student)
         {
             return new StudentResponseDTO(
+                student.Id,
                 student.FirstName,
                 student.LastName,
                 student.Email,

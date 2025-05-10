@@ -34,6 +34,7 @@
             dgwExamList = new DataGridView();
             tabPage2 = new TabPage();
             label2 = new Label();
+            btnLogout = new Button();
             tbCtrl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
@@ -53,6 +54,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnLogout);
             tabPage1.Controls.Add(btnAddExam);
             tabPage1.Controls.Add(dgwExamList);
             tabPage1.Location = new Point(4, 29);
@@ -110,6 +112,20 @@
             label2.TabIndex = 0;
             label2.Text = "label2";
             // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Myanmar Text", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(8, 399);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(49, 40);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "﻿\u23fb";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
             // StudentPage
             // 
             AutoScaleDimensions = new SizeF(6F, 20F);
@@ -140,5 +156,6 @@
         private Label label2;
         private DataGridView dgwExamList;
         private Button btnAddExam;
+        private Button btnLogout;
     }
 }

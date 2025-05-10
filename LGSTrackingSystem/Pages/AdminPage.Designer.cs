@@ -30,10 +30,11 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            btnUpdate = new Button();
             btnAddStudent = new Button();
             dgwStudentList = new DataGridView();
             tabPage2 = new TabPage();
-            btnUpdate = new Button();
+            btnLogout = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwStudentList).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnLogout);
             tabPage1.Controls.Add(btnUpdate);
             tabPage1.Controls.Add(btnAddStudent);
             tabPage1.Controls.Add(dgwStudentList);
@@ -62,6 +64,17 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Students";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(686, 381);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(40, 40);
+            btnUpdate.TabIndex = 3;
+            btnUpdate.Text = "🛠️";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnAddStudent
             // 
@@ -99,16 +112,19 @@
             tabPage2.Text = "My Profile";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnUpdate
+            // btnLogout
             // 
-            btnUpdate.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(686, 381);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(40, 40);
-            btnUpdate.TabIndex = 3;
-            btnUpdate.Text = "🛠️";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Myanmar Text", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(8, 381);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(49, 40);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "﻿\u23fb";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // AdminPage
             // 
@@ -139,5 +155,6 @@
         private DataGridView dgwStudentList;
         private Button btnAddStudent;
         private Button btnUpdate;
+        private Button btnLogout;
     }
 }

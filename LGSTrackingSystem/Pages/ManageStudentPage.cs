@@ -8,6 +8,7 @@ namespace LGSTrackingSystem.Pages
     {
         private readonly StudentService _studentService;
         private readonly UserService _userService;
+        private int _studentId;
 
         public ManageStudentPage()
         {
@@ -18,6 +19,7 @@ namespace LGSTrackingSystem.Pages
 
         public ManageStudentPage(StudentResponseDTO student)
         {
+            _studentId = student.Id;
             _userService = new UserService();
             _studentService = new StudentService();
             InitializeComponent();
@@ -34,7 +36,24 @@ namespace LGSTrackingSystem.Pages
 
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private async void btnOK_Click(object sender, EventArgs e)
+        {
+            if (string.Equals(this.Text, "Update Student"))
+            {
+                await UpdateStudentAsync(_studentId);
+                MessageBox.Show("Student updated successfully.");
+                return;
+            }
+
+            if (string.Equals(this.Text, "Add Student"))
+            {
+                AddStudent();
+                MessageBox.Show("Student added successfully.");
+                return;
+            }
+        }
+
+        private void AddStudent()
         {
             var newUser = new User()
             {
@@ -59,15 +78,28 @@ namespace LGSTrackingSystem.Pages
             _studentService.AddStudent(newStudent);
         }
 
-        private string GenerateUsername(string email)
+        private async Task UpdateStudentAsync(int studentId)
         {
-            var username = email.Split('@')[0].ToLower();
-            return username;
+            var existingStudent = await _studentService.GetStudentByIdAsync(studentId);
+
+            if (existingStudent is not null)
+            {
+                existingStudent.FirstName = tbxFirstName.Text;
+                existingStudent.LastName = tbxLastName.Text;
+                existingStudent.Email = tbxEmail.Text;
+                existingStudent.PhoneNumber = msktbxPhone.Text;
+                existingStudent.SchoolName = tbxSchoolName.Text;
+                existingStudent.Class = tbxClass.Text;
+
+                await _studentService.UpdateStudentAsync(studentId, existingStudent);
+                return;
+            }
+            MessageBox.Show("Student not found.");
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private string GenerateUsername(string email) => email.Split('@')[0].ToLower();
+
+        private void btnCancel_Click(object sender, EventArgs e) => this.Close();
+
     }
 }

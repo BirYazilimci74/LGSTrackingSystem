@@ -38,6 +38,11 @@ namespace LGSTrackingSystem.Services.Services
             _studentRepository.Add(student);
         }
 
+        public async Task UpdateStudentAsync(int id, Student student)
+        {
+            await _studentRepository.UpdateAsync(id, student);
+        }
+
         public async Task<List<Exam>> GetExamsFromStudent(int studentId)
         {
             var student = await _studentRepository.GetByIdAsync(studentId);

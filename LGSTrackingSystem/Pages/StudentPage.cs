@@ -34,5 +34,12 @@ namespace LGSTrackingSystem.Pages
             _exams = await _studentService.GetExamsFromStudent(_student.Id);
             dgwExamList.DataSource = _exams.Select(e => e.ToExamResultDTO()).ToList();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            var loginPage = new LoginPage();
+            loginPage.Show();
+            this.Close();
+        }
     }
 }
