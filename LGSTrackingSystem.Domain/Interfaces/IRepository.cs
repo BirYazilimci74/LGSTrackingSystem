@@ -6,5 +6,6 @@
         Task UpdateAsync(int id, T entity);
         Task<T?> GetByIdAsync(int id);
         Task<List<T>> GetAllAsync();
+        void Delete(T entity);
     }
 }

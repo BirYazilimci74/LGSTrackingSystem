@@ -55,5 +55,11 @@ namespace LGSTrackingSystem.Repositories.Repositories
                 .Include(a => a.User)
                 .FirstOrDefaultAsync(a => a.UserId == userId);
         }
+
+        public void Delete(Admin entity)
+        {
+            _context.Admins.Remove(entity);
+            _context.SaveChanges();
+        }
     }
 }

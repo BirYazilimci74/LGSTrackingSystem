@@ -61,5 +61,11 @@ namespace LGSTrackingSystem.Repositories.Repositories
                 .Include(s => s.Exams)
                 .FirstOrDefaultAsync(s => s.UserId == userId);
         }
+
+        public void Delete(Student entity)
+        {
+            _context.Students.Remove(entity);
+            _context.SaveChanges();
+        }
     }
 }

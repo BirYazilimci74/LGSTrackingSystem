@@ -28,16 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            btnLogout = new Button();
             btnUpdate = new Button();
             btnAddStudent = new Button();
             dgwStudentList = new DataGridView();
+            studentContextMenu = new ContextMenuStrip(components);
+            addExamToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            addStudentToolStripMenuItem = new ToolStripMenuItem();
+            listExamsToolStripMenuItem = new ToolStripMenuItem();
             tabPage2 = new TabPage();
-            btnLogout = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwStudentList).BeginInit();
+            studentContextMenu.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -64,6 +71,20 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Students";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Myanmar Text", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(8, 381);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(49, 40);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "﻿\u23fb";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnUpdate
             // 
@@ -94,6 +115,7 @@
             dgwStudentList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgwStudentList.BackgroundColor = Color.White;
             dgwStudentList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwStudentList.ContextMenuStrip = studentContextMenu;
             dgwStudentList.Dock = DockStyle.Top;
             dgwStudentList.Location = new Point(3, 3);
             dgwStudentList.Name = "dgwStudentList";
@@ -101,6 +123,40 @@
             dgwStudentList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgwStudentList.Size = new Size(772, 372);
             dgwStudentList.TabIndex = 0;
+            // 
+            // studentContextMenu
+            // 
+            studentContextMenu.Items.AddRange(new ToolStripItem[] { addExamToolStripMenuItem, editToolStripMenuItem, addStudentToolStripMenuItem, listExamsToolStripMenuItem });
+            studentContextMenu.Name = "contextMenuStrip1";
+            studentContextMenu.Size = new Size(181, 114);
+            // 
+            // addExamToolStripMenuItem
+            // 
+            addExamToolStripMenuItem.Name = "addExamToolStripMenuItem";
+            addExamToolStripMenuItem.Size = new Size(180, 22);
+            addExamToolStripMenuItem.Text = "Add Exam";
+            addExamToolStripMenuItem.Click += addExamToolStripMenuItem_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Click += editToolStripMenuItem_ClickAsync;
+            // 
+            // addStudentToolStripMenuItem
+            // 
+            addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
+            addStudentToolStripMenuItem.Size = new Size(180, 22);
+            addStudentToolStripMenuItem.Text = "Add Student";
+            addStudentToolStripMenuItem.Click += addStudentToolStripMenuItem_ClickAsync;
+            // 
+            // listExamsToolStripMenuItem
+            // 
+            listExamsToolStripMenuItem.Name = "listExamsToolStripMenuItem";
+            listExamsToolStripMenuItem.Size = new Size(180, 22);
+            listExamsToolStripMenuItem.Text = "List Exams";
+            listExamsToolStripMenuItem.Click += listExamsToolStripMenuItem_Click;
             // 
             // tabPage2
             // 
@@ -111,20 +167,6 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "My Profile";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Myanmar Text", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(8, 381);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(49, 40);
-            btnLogout.TabIndex = 4;
-            btnLogout.Text = "﻿\u23fb";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
             // 
             // AdminPage
             // 
@@ -144,6 +186,7 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgwStudentList).EndInit();
+            studentContextMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -156,5 +199,10 @@
         private Button btnAddStudent;
         private Button btnUpdate;
         private Button btnLogout;
+        private ContextMenuStrip studentContextMenu;
+        private ToolStripMenuItem addExamToolStripMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem addStudentToolStripMenuItem;
+        private ToolStripMenuItem listExamsToolStripMenuItem;
     }
 }

@@ -70,8 +70,8 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("EnglishIncorrect")
                         .HasColumnType("int");
 
-                    b.Property<double>("EnglishNet")
-                        .HasColumnType("float");
+                    b.Property<decimal>("EnglishNet")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<string>("EnteredBy")
                         .IsRequired()
@@ -86,8 +86,8 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("HistoryIncorrect")
                         .HasColumnType("int");
 
-                    b.Property<double>("HistoryNet")
-                        .HasColumnType("float");
+                    b.Property<decimal>("HistoryNet")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("MathCorrect")
                         .HasColumnType("int");
@@ -95,8 +95,8 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("MathIncorrect")
                         .HasColumnType("int");
 
-                    b.Property<double>("MathNet")
-                        .HasColumnType("float");
+                    b.Property<decimal>("MathNet")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("ReligionCorrect")
                         .HasColumnType("int");
@@ -104,8 +104,8 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("ReligionIncorrect")
                         .HasColumnType("int");
 
-                    b.Property<double>("ReligionNet")
-                        .HasColumnType("float");
+                    b.Property<decimal>("ReligionNet")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("ScienceCorrect")
                         .HasColumnType("int");
@@ -113,8 +113,8 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("ScienceIncorrect")
                         .HasColumnType("int");
 
-                    b.Property<double>("ScienceNet")
-                        .HasColumnType("float");
+                    b.Property<decimal>("ScienceNet")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -125,8 +125,8 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("TurkishIncorrect")
                         .HasColumnType("int");
 
-                    b.Property<double>("TurkishNet")
-                        .HasColumnType("float");
+                    b.Property<decimal>("TurkishNet")
+                        .HasColumnType("decimal(18, 2)");
 
                     b.HasKey("Id");
 

@@ -30,11 +30,11 @@
         {
             tbCtrl = new TabControl();
             tabPage1 = new TabPage();
+            btnLogout = new Button();
             btnAddExam = new Button();
             dgwExamList = new DataGridView();
             tabPage2 = new TabPage();
             label2 = new Label();
-            btnLogout = new Button();
             tbCtrl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
@@ -64,6 +64,20 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Exams";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Myanmar Text", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(8, 399);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(49, 40);
+            btnLogout.TabIndex = 2;
+            btnLogout.Text = "﻿\u23fb";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // btnAddExam
             // 
@@ -111,20 +125,6 @@
             label2.Size = new Size(40, 20);
             label2.TabIndex = 0;
             label2.Text = "label2";
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Myanmar Text", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(8, 399);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(49, 40);
-            btnLogout.TabIndex = 2;
-            btnLogout.Text = "﻿\u23fb";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
             // 
             // StudentPage
             // 

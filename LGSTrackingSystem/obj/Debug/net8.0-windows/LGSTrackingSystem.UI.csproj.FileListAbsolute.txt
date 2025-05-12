@@ -143,3 +143,4 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.genruntimeconfig.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\ref\LGSTrackingSystem.UI.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.ManageStudentPage.resources
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.Pages.ExamListPage.resources

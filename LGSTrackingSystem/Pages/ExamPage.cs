@@ -7,7 +7,7 @@ namespace LGSTrackingSystem.Pages
     {
         private readonly ExamService _examService;
         private readonly Student? _student;
-        private readonly Exam? _exam;
+
         public ExamPage(Student student)
         {
             _student = student;

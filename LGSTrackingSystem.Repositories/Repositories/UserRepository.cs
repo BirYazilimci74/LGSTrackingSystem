@@ -49,5 +49,11 @@ namespace LGSTrackingSystem.Repositories.Repositories
             return await _context.Users
                 .FirstOrDefaultAsync(u => u.Username == username && u.Password == password);
         }
+
+        public void Delete(User entity)
+        {
+            _context.Users.Remove(entity);
+            _context.SaveChanges();
+        }
     }
 }

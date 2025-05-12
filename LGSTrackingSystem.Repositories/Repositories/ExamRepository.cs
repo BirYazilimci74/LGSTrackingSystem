@@ -86,5 +86,13 @@ namespace LGSTrackingSystem.Repositories.Repositories
             existingStudent.Exams.Add(newExam);
             _context.SaveChanges();
         }
+
+        public void Delete(Exam entity)
+        {
+            if (entity == null) throw new ArgumentNullException(nameof(entity));
+            
+            _context.Exams.Remove(entity);
+            _context.SaveChanges();
+        }
     }
 }

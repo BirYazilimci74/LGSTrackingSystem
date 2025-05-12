@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LGSTrackingSystem.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cbeee35896320f7bb6cb46871a0d5dee2c2c91a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a427e6d2bcae9cf200088e551d1a1265490b1ad4")]
 [assembly: System.Reflection.AssemblyProductAttribute("LGSTrackingSystem.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LGSTrackingSystem.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
