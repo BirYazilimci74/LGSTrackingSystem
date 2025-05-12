@@ -41,5 +41,12 @@ namespace LGSTrackingSystem.Pages
             loginPage.Show();
             this.Close();
         }
+
+        private void addExamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExamPage examPage = new ExamPage(_student);
+            examPage.ShowDialog();
+            LoadExamResults();
+        }
     }
 }

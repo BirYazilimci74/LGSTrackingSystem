@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\examlistpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\examlistpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\examlistpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\examlistpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|solutionrelative:pages\\exampage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{375BC783-1EB5-4355-94C7-BEA6111AF16E}|LGSTrackingSystem.UI.csproj|c:\\users\\yahya\\desktop\\lgstrackingsystem\\lgstrackingsystem\\pages\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1052,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,58 +38,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ExamPage.cs",
               "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs",
               "RelativeDocumentMoniker": "Pages\\ExamPage.cs",
               "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs",
               "RelativeToolTip": "Pages\\ExamPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T09:25:10.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ExamListPage.cs",
-              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamListPage.cs",
-              "RelativeDocumentMoniker": "Pages\\ExamListPage.cs",
-              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamListPage.cs",
-              "RelativeToolTip": "Pages\\ExamListPage.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDkAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:54:17.378Z",
+              "WhenOpened": "2025-05-12T13:07:20.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ExamListPage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamListPage.cs",
-              "RelativeDocumentMoniker": "Pages\\ExamListPage.cs",
-              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamListPage.cs [Design]",
-              "RelativeToolTip": "Pages\\ExamListPage.cs [Design]",
+              "Title": "ExamPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs",
+              "RelativeDocumentMoniker": "Pages\\ExamPage.cs",
+              "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\ExamPage.cs [Design]",
+              "RelativeToolTip": "Pages\\ExamPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T08:54:03.635Z",
+              "WhenOpened": "2025-05-12T13:07:16.879Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AdminPage.cs",
               "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\AdminPage.cs",
               "RelativeDocumentMoniker": "Pages\\AdminPage.cs",
               "ToolTip": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\AdminPage.cs",
               "RelativeToolTip": "Pages\\AdminPage.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAArwHsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAWwFcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T09:48:34.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "AdminPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\yahya\\Desktop\\LGSTrackingSystem\\LGSTrackingSystem\\Pages\\AdminPage.cs",
               "RelativeDocumentMoniker": "Pages\\AdminPage.cs",

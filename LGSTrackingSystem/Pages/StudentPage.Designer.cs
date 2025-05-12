@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tbCtrl = new TabControl();
             tabPage1 = new TabPage();
             btnLogout = new Button();
             btnAddExam = new Button();
             dgwExamList = new DataGridView();
+            examContextMenu = new ContextMenuStrip(components);
+            addExamToolStripMenuItem = new ToolStripMenuItem();
             tabPage2 = new TabPage();
             label2 = new Label();
             tbCtrl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
+            examContextMenu.SuspendLayout();
             tabPage2.SuspendLayout();
             SuspendLayout();
             // 
@@ -86,7 +90,7 @@
             btnAddExam.Name = "btnAddExam";
             btnAddExam.Size = new Size(40, 40);
             btnAddExam.TabIndex = 1;
-            btnAddExam.Text = "+";
+            btnAddExam.Text = "➕";
             btnAddExam.UseVisualStyleBackColor = true;
             btnAddExam.Click += btnAddExam_Click;
             // 
@@ -97,6 +101,7 @@
             dgwExamList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgwExamList.BackgroundColor = Color.White;
             dgwExamList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgwExamList.ContextMenuStrip = examContextMenu;
             dgwExamList.Dock = DockStyle.Top;
             dgwExamList.Location = new Point(3, 3);
             dgwExamList.Name = "dgwExamList";
@@ -105,6 +110,19 @@
             dgwExamList.ShowEditingIcon = false;
             dgwExamList.Size = new Size(783, 390);
             dgwExamList.TabIndex = 0;
+            // 
+            // examContextMenu
+            // 
+            examContextMenu.Items.AddRange(new ToolStripItem[] { addExamToolStripMenuItem });
+            examContextMenu.Name = "examContextMenu";
+            examContextMenu.Size = new Size(128, 26);
+            // 
+            // addExamToolStripMenuItem
+            // 
+            addExamToolStripMenuItem.Name = "addExamToolStripMenuItem";
+            addExamToolStripMenuItem.Size = new Size(127, 22);
+            addExamToolStripMenuItem.Text = "Add Exam";
+            addExamToolStripMenuItem.Click += addExamToolStripMenuItem_Click;
             // 
             // tabPage2
             // 
@@ -143,6 +161,7 @@
             tbCtrl.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgwExamList).EndInit();
+            examContextMenu.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ResumeLayout(false);
@@ -157,5 +176,7 @@
         private DataGridView dgwExamList;
         private Button btnAddExam;
         private Button btnLogout;
+        private ContextMenuStrip examContextMenu;
+        private ToolStripMenuItem addExamToolStripMenuItem;
     }
 }

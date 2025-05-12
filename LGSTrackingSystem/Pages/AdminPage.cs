@@ -82,7 +82,7 @@ namespace LGSTrackingSystem.Pages
                 return;
             }
 
-            ExamPage examPage = new ExamPage(student);
+            ExamPage examPage = new ExamPage(studentId);
             examPage.Text = "Add Exam";
             examPage.ShowDialog();
         }

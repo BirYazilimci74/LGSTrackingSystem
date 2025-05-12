@@ -5,23 +5,30 @@ namespace LGSTrackingSystem.Pages
 {
     public partial class ExamPage : Form
     {
+        private readonly StudentService _studentService;
         private readonly ExamService _examService;
-        private readonly Student? _student;
+        private Student? _student;
+        private readonly int _studentId;
 
+        //for student
         public ExamPage(Student student)
         {
             _student = student;
+            _studentService = new StudentService();
             _examService = new ExamService();
             InitializeComponent();
         }
 
-        public ExamPage()
+        //for admin
+        public ExamPage(int studentId)
         {
+            _studentId = studentId;
+            _studentService = new StudentService();
             _examService = new ExamService();
             InitializeComponent();
         }
 
-        private void AddExam()
+        private async void AddExam()
         {
             var newExam = new Exam
             {
@@ -51,9 +58,20 @@ namespace LGSTrackingSystem.Pages
                 EnglishIncorrect = Convert.ToInt32(numEnglishIncorrect.Value),
                 EnglishNet = Convert.ToDouble(numEnglishCorrect.Value) - (Convert.ToDouble(numEnglishIncorrect.Value) * 0.33),
                 
-                StudentId = _student.Id,
-                Student = _student
+                StudentId = _student?.Id ?? _studentId,
             };
+
+            if (_student is null)
+            {
+                var student = await _studentService.GetStudentByIdAsync(_studentId);
+                if (student is null)
+                {
+                    MessageBox.Show("Student not found.");
+                    return;
+                }
+                _student = student;
+            }
+
             _examService.AddExamToStudent(_student, newExam);
         }
 
