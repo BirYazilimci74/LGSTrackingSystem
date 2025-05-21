@@ -32,7 +32,6 @@
             tbCtrl = new TabControl();
             tabPage1 = new TabPage();
             btnLogout = new Button();
-            btnAddExam = new Button();
             dgwExamList = new DataGridView();
             examContextMenu = new ContextMenuStrip(components);
             addExamToolStripMenuItem = new ToolStripMenuItem();
@@ -59,7 +58,6 @@
             // tabPage1
             // 
             tabPage1.Controls.Add(btnLogout);
-            tabPage1.Controls.Add(btnAddExam);
             tabPage1.Controls.Add(dgwExamList);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
@@ -82,17 +80,6 @@
             btnLogout.Text = "﻿\u23fb";
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
-            // 
-            // btnAddExam
-            // 
-            btnAddExam.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddExam.Location = new Point(741, 399);
-            btnAddExam.Name = "btnAddExam";
-            btnAddExam.Size = new Size(40, 40);
-            btnAddExam.TabIndex = 1;
-            btnAddExam.Text = "➕";
-            btnAddExam.UseVisualStyleBackColor = true;
-            btnAddExam.Click += btnAddExam_Click;
             // 
             // dgwExamList
             // 
@@ -174,7 +161,6 @@
         private TabPage tabPage2;
         private Label label2;
         private DataGridView dgwExamList;
-        private Button btnAddExam;
         private Button btnLogout;
         private ContextMenuStrip examContextMenu;
         private ToolStripMenuItem addExamToolStripMenuItem;

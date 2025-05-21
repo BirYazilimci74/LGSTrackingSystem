@@ -22,11 +22,6 @@ namespace LGSTrackingSystem.Pages
             InitializeComponent();
         }
 
-        private void LoginPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             if(CheckEmptyFields()) return;

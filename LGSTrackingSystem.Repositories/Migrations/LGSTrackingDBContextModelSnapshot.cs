@@ -80,6 +80,10 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<DateTime>("ExamDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ExamName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("HistoryCorrect")
                         .HasColumnType("int");
 
@@ -114,6 +118,9 @@ namespace LGSTrackingSystem.Repositories.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("ScienceNet")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<decimal>("Score")
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("StudentId")

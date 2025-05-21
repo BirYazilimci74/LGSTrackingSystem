@@ -8,6 +8,7 @@ namespace LGSTrackingSystem.Services.Mappers
         public static ExamResultDTO ToExamResultDTO(this Exam exam)
         {
             return new ExamResultDTO(
+                exam.ExamName,
                 exam.ExamDate,
                 exam.EnteredBy,
                 exam.MathNet,
@@ -15,7 +16,8 @@ namespace LGSTrackingSystem.Services.Mappers
                 exam.TurkishNet,
                 exam.HistoryNet,
                 exam.ReligionNet,
-                exam.EnglishNet
+                exam.EnglishNet,
+                exam.Score
             );
         }
     }

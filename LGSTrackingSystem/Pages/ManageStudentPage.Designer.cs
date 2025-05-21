@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             tbxFirstName = new TextBox();
             tbxLastName = new TextBox();
             tbxEmail = new TextBox();
@@ -42,114 +36,90 @@
             tbxClass = new TextBox();
             btnOK = new Button();
             btnCancel = new Button();
+            lblFirstNameMsg = new Label();
+            lblEmailMsg = new Label();
+            lblPhoneMsg = new Label();
+            lblSchoolNameMsg = new Label();
+            lblClassMsg = new Label();
+            lblLastNameMsg = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Myanmar Text", 12F);
-            label1.Location = new Point(89, 66);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 29);
-            label1.TabIndex = 0;
-            label1.Text = "First Name: ";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Myanmar Text", 12F);
-            label2.Location = new Point(90, 107);
-            label2.Name = "label2";
-            label2.Size = new Size(94, 29);
-            label2.TabIndex = 1;
-            label2.Text = "Last Name: ";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Myanmar Text", 12F);
-            label3.Location = new Point(126, 148);
-            label3.Name = "label3";
-            label3.Size = new Size(58, 29);
-            label3.TabIndex = 2;
-            label3.Text = "Email: ";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Myanmar Text", 12F);
-            label4.Location = new Point(120, 189);
-            label4.Name = "label4";
-            label4.Size = new Size(64, 29);
-            label4.TabIndex = 3;
-            label4.Text = "Phone: ";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Myanmar Text", 12F);
-            label5.Location = new Point(71, 230);
-            label5.Name = "label5";
-            label5.Size = new Size(113, 29);
-            label5.TabIndex = 4;
-            label5.Text = "School Name: ";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Myanmar Text", 12F);
-            label6.Location = new Point(128, 270);
-            label6.Name = "label6";
-            label6.Size = new Size(56, 29);
-            label6.TabIndex = 5;
-            label6.Text = "Class: ";
             // 
             // tbxFirstName
             // 
-            tbxFirstName.Location = new Point(185, 65);
+            tbxFirstName.BorderStyle = BorderStyle.FixedSingle;
+            tbxFirstName.Font = new Font("Myanmar Text", 9.75F);
+            tbxFirstName.Location = new Point(100, 70);
+            tbxFirstName.Margin = new Padding(0, 0, 0, 10);
             tbxFirstName.Name = "tbxFirstName";
-            tbxFirstName.Size = new Size(152, 30);
+            tbxFirstName.PlaceholderText = "First Name";
+            tbxFirstName.RightToLeft = RightToLeft.No;
+            tbxFirstName.Size = new Size(217, 32);
             tbxFirstName.TabIndex = 1;
             // 
             // tbxLastName
             // 
-            tbxLastName.Location = new Point(185, 106);
+            tbxLastName.BorderStyle = BorderStyle.FixedSingle;
+            tbxLastName.Font = new Font("Myanmar Text", 9.75F);
+            tbxLastName.Location = new Point(100, 110);
+            tbxLastName.Margin = new Padding(0, 0, 0, 10);
             tbxLastName.Name = "tbxLastName";
-            tbxLastName.Size = new Size(152, 30);
+            tbxLastName.PlaceholderText = "Last Name";
+            tbxLastName.RightToLeft = RightToLeft.No;
+            tbxLastName.Size = new Size(217, 32);
             tbxLastName.TabIndex = 2;
             // 
             // tbxEmail
             // 
-            tbxEmail.Location = new Point(185, 147);
+            tbxEmail.BorderStyle = BorderStyle.FixedSingle;
+            tbxEmail.Font = new Font("Myanmar Text", 9.75F);
+            tbxEmail.Location = new Point(100, 150);
+            tbxEmail.Margin = new Padding(0, 0, 0, 10);
             tbxEmail.Name = "tbxEmail";
-            tbxEmail.Size = new Size(152, 30);
+            tbxEmail.PlaceholderText = "example@gmail.com";
+            tbxEmail.RightToLeft = RightToLeft.No;
+            tbxEmail.Size = new Size(217, 32);
             tbxEmail.TabIndex = 3;
+            tbxEmail.Leave += tbxEmail_Leave;
             // 
             // tbxSchoolName
             // 
-            tbxSchoolName.Location = new Point(185, 229);
+            tbxSchoolName.BorderStyle = BorderStyle.FixedSingle;
+            tbxSchoolName.Font = new Font("Myanmar Text", 9.75F);
+            tbxSchoolName.Location = new Point(100, 230);
+            tbxSchoolName.Margin = new Padding(0, 0, 0, 10);
             tbxSchoolName.Name = "tbxSchoolName";
-            tbxSchoolName.Size = new Size(152, 30);
+            tbxSchoolName.PlaceholderText = "School Name";
+            tbxSchoolName.RightToLeft = RightToLeft.No;
+            tbxSchoolName.Size = new Size(217, 32);
             tbxSchoolName.TabIndex = 5;
             // 
             // msktbxPhone
             // 
-            msktbxPhone.Location = new Point(185, 188);
+            msktbxPhone.BorderStyle = BorderStyle.FixedSingle;
+            msktbxPhone.Font = new Font("Myanmar Text", 9.75F);
+            msktbxPhone.Location = new Point(100, 190);
+            msktbxPhone.Margin = new Padding(0, 0, 0, 10);
             msktbxPhone.Mask = "(999) 000-0000";
             msktbxPhone.Name = "msktbxPhone";
-            msktbxPhone.Size = new Size(152, 30);
+            msktbxPhone.RightToLeft = RightToLeft.No;
+            msktbxPhone.Size = new Size(217, 32);
             msktbxPhone.TabIndex = 4;
             // 
             // tbxClass
             // 
-            tbxClass.Location = new Point(185, 270);
+            tbxClass.BorderStyle = BorderStyle.FixedSingle;
+            tbxClass.Font = new Font("Myanmar Text", 9.75F);
+            tbxClass.Location = new Point(100, 270);
+            tbxClass.Margin = new Padding(0);
             tbxClass.Name = "tbxClass";
-            tbxClass.Size = new Size(152, 30);
+            tbxClass.PlaceholderText = "Class";
+            tbxClass.RightToLeft = RightToLeft.No;
+            tbxClass.Size = new Size(217, 32);
             tbxClass.TabIndex = 6;
             // 
             // btnOK
             // 
-            btnOK.Location = new Point(378, 373);
+            btnOK.Location = new Point(324, 365);
             btnOK.Name = "btnOK";
             btnOK.Size = new Size(105, 32);
             btnOK.TabIndex = 7;
@@ -159,7 +129,7 @@
             // 
             // btnCancel
             // 
-            btnCancel.Location = new Point(267, 373);
+            btnCancel.Location = new Point(213, 365);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(105, 32);
             btnCancel.TabIndex = 8;
@@ -167,11 +137,71 @@
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
             // 
+            // lblFirstNameMsg
+            // 
+            lblFirstNameMsg.AutoSize = true;
+            lblFirstNameMsg.ForeColor = Color.Red;
+            lblFirstNameMsg.Location = new Point(320, 77);
+            lblFirstNameMsg.Name = "lblFirstNameMsg";
+            lblFirstNameMsg.Size = new Size(0, 21);
+            lblFirstNameMsg.TabIndex = 9;
+            // 
+            // lblEmailMsg
+            // 
+            lblEmailMsg.AutoSize = true;
+            lblEmailMsg.ForeColor = Color.Red;
+            lblEmailMsg.Location = new Point(320, 157);
+            lblEmailMsg.Name = "lblEmailMsg";
+            lblEmailMsg.Size = new Size(0, 21);
+            lblEmailMsg.TabIndex = 11;
+            // 
+            // lblPhoneMsg
+            // 
+            lblPhoneMsg.AutoSize = true;
+            lblPhoneMsg.ForeColor = Color.Red;
+            lblPhoneMsg.Location = new Point(320, 197);
+            lblPhoneMsg.Name = "lblPhoneMsg";
+            lblPhoneMsg.Size = new Size(0, 21);
+            lblPhoneMsg.TabIndex = 12;
+            // 
+            // lblSchoolNameMsg
+            // 
+            lblSchoolNameMsg.AutoSize = true;
+            lblSchoolNameMsg.ForeColor = Color.Red;
+            lblSchoolNameMsg.Location = new Point(320, 237);
+            lblSchoolNameMsg.Name = "lblSchoolNameMsg";
+            lblSchoolNameMsg.Size = new Size(0, 21);
+            lblSchoolNameMsg.TabIndex = 13;
+            // 
+            // lblClassMsg
+            // 
+            lblClassMsg.AutoSize = true;
+            lblClassMsg.ForeColor = Color.Red;
+            lblClassMsg.Location = new Point(320, 277);
+            lblClassMsg.Name = "lblClassMsg";
+            lblClassMsg.Size = new Size(0, 21);
+            lblClassMsg.TabIndex = 14;
+            // 
+            // lblLastNameMsg
+            // 
+            lblLastNameMsg.AutoSize = true;
+            lblLastNameMsg.ForeColor = Color.Red;
+            lblLastNameMsg.Location = new Point(320, 117);
+            lblLastNameMsg.Name = "lblLastNameMsg";
+            lblLastNameMsg.Size = new Size(0, 21);
+            lblLastNameMsg.TabIndex = 10;
+            // 
             // ManageStudentPage
             // 
             AutoScaleDimensions = new SizeF(7F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(495, 417);
+            ClientSize = new Size(441, 409);
+            Controls.Add(lblClassMsg);
+            Controls.Add(lblSchoolNameMsg);
+            Controls.Add(lblPhoneMsg);
+            Controls.Add(lblEmailMsg);
+            Controls.Add(lblLastNameMsg);
+            Controls.Add(lblFirstNameMsg);
             Controls.Add(btnCancel);
             Controls.Add(btnOK);
             Controls.Add(tbxClass);
@@ -180,12 +210,6 @@
             Controls.Add(tbxEmail);
             Controls.Add(tbxLastName);
             Controls.Add(tbxFirstName);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Font = new Font("Myanmar Text", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
@@ -199,13 +223,6 @@
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
         private TextBox tbxFirstName;
         private TextBox tbxLastName;
         private TextBox tbxEmail;
@@ -214,5 +231,11 @@
         private TextBox tbxClass;
         private Button btnOK;
         private Button btnCancel;
+        private Label lblFirstNameMsg;
+        private Label lblEmailMsg;
+        private Label lblPhoneMsg;
+        private Label lblSchoolNameMsg;
+        private Label lblClassMsg;
+        private Label lblLastNameMsg;
     }
 }

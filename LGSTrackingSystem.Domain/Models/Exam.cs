@@ -7,6 +7,7 @@ namespace LGSTrackingSystem.Domain.Models
     {
         [Key]
         public int Id { get; set; }
+        public string ExamName { get; set; }
         public DateTime ExamDate { get; set; }
         public string EnteredBy { get; set; }
 
@@ -40,6 +41,8 @@ namespace LGSTrackingSystem.Domain.Models
         [Column(TypeName = "decimal(18, 2)")]
         public double EnglishNet { get; set; } = 0;
 
+        [Column(TypeName = "decimal(18, 2)")]
+        public double Score { get; set; }
         public int StudentId { get; set; }
         public Student Student { get; set; }
     }

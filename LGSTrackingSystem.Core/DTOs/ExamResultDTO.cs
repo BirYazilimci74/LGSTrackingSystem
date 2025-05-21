@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace LGSTrackingSystem.Core.DTOs
 {
     public record ExamResultDTO(
+        string ExamName,
         DateTime ExamDate,
         string EnteredBy,
         double MathNet,
@@ -14,6 +15,7 @@ namespace LGSTrackingSystem.Core.DTOs
         double TurkishNet,
         double HistoryNet,
         double ReligionNet,
-        double EnglishNet
+        double EnglishNet,
+        double Score
     );
 }

@@ -32,8 +32,6 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             btnLogout = new Button();
-            btnUpdate = new Button();
-            btnAddStudent = new Button();
             dgwStudentList = new DataGridView();
             studentContextMenu = new ContextMenuStrip(components);
             addExamToolStripMenuItem = new ToolStripMenuItem();
@@ -61,8 +59,6 @@
             // tabPage1
             // 
             tabPage1.Controls.Add(btnLogout);
-            tabPage1.Controls.Add(btnUpdate);
-            tabPage1.Controls.Add(btnAddStudent);
             tabPage1.Controls.Add(dgwStudentList);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
@@ -86,28 +82,6 @@
             btnLogout.UseVisualStyleBackColor = false;
             btnLogout.Click += btnLogout_Click;
             // 
-            // btnUpdate
-            // 
-            btnUpdate.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(686, 381);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(40, 40);
-            btnUpdate.TabIndex = 3;
-            btnUpdate.Text = "🛠️";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
-            // 
-            // btnAddStudent
-            // 
-            btnAddStudent.Font = new Font("Myanmar Text", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddStudent.Location = new Point(732, 381);
-            btnAddStudent.Name = "btnAddStudent";
-            btnAddStudent.Size = new Size(40, 40);
-            btnAddStudent.TabIndex = 2;
-            btnAddStudent.Text = "➕";
-            btnAddStudent.UseVisualStyleBackColor = true;
-            btnAddStudent.Click += btnAddStudent_Click;
-            // 
             // dgwStudentList
             // 
             dgwStudentList.AllowUserToAddRows = false;
@@ -128,33 +102,33 @@
             // 
             studentContextMenu.Items.AddRange(new ToolStripItem[] { addExamToolStripMenuItem, editToolStripMenuItem, addStudentToolStripMenuItem, listExamsToolStripMenuItem });
             studentContextMenu.Name = "contextMenuStrip1";
-            studentContextMenu.Size = new Size(181, 114);
+            studentContextMenu.Size = new Size(141, 92);
             // 
             // addExamToolStripMenuItem
             // 
             addExamToolStripMenuItem.Name = "addExamToolStripMenuItem";
-            addExamToolStripMenuItem.Size = new Size(180, 22);
+            addExamToolStripMenuItem.Size = new Size(140, 22);
             addExamToolStripMenuItem.Text = "Add Exam";
             addExamToolStripMenuItem.Click += addExamToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Size = new Size(140, 22);
             editToolStripMenuItem.Text = "Edit";
             editToolStripMenuItem.Click += editToolStripMenuItem_ClickAsync;
             // 
             // addStudentToolStripMenuItem
             // 
             addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
-            addStudentToolStripMenuItem.Size = new Size(180, 22);
+            addStudentToolStripMenuItem.Size = new Size(140, 22);
             addStudentToolStripMenuItem.Text = "Add Student";
             addStudentToolStripMenuItem.Click += addStudentToolStripMenuItem_ClickAsync;
             // 
             // listExamsToolStripMenuItem
             // 
             listExamsToolStripMenuItem.Name = "listExamsToolStripMenuItem";
-            listExamsToolStripMenuItem.Size = new Size(180, 22);
+            listExamsToolStripMenuItem.Size = new Size(140, 22);
             listExamsToolStripMenuItem.Text = "List Exams";
             listExamsToolStripMenuItem.Click += listExamsToolStripMenuItem_Click;
             // 
@@ -196,8 +170,6 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private DataGridView dgwStudentList;
-        private Button btnAddStudent;
-        private Button btnUpdate;
         private Button btnLogout;
         private ContextMenuStrip studentContextMenu;
         private ToolStripMenuItem addExamToolStripMenuItem;
