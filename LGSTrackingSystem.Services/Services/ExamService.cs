@@ -36,5 +36,18 @@ namespace LGSTrackingSystem.Services.Services
                 throw new Exception("Exam not found");
             return exam;
         }
+
+        public (bool,string) CheckAndCalculateNet(decimal correct, decimal incorrect, int maxNet)
+        {
+            string strNet;
+            if (correct + incorrect > maxNet)
+            {
+                strNet = $"should be less than {maxNet}";
+                return (false,strNet);
+            }
+            var net = ((double)correct - ((double)incorrect / 3 + ((double)incorrect % 3) * 0.33));
+            strNet = net.ToString("0.00");
+            return (true,strNet);
+        }
     }
 }
