@@ -27,11 +27,19 @@ namespace LGSTrackingSystem.Pages
 
         private async Task LoadStudents()
         {
-            dgwStudentList.DataSource = null;
-            _students = await _studentService.GetAllStudentsAsync();
-            dgwStudentList.DataSource = _students.Select(s => s.ToStudentResponseDTO()).ToList();
-            dgwStudentList.Columns["Id"].Visible = false;
-            dgwStudentList.Columns["User"].Visible = false;
+            try
+            {
+                dgwStudentList.DataSource = null;
+                _students = await _studentService.GetAllStudentsAsync();
+                dgwStudentList.DataSource = _students.Select(s => s.ToStudentResponseDTO()).ToList();
+                dgwStudentList.Columns["Id"].Visible = false;
+                dgwStudentList.Columns["User"].Visible = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Students could not list");
+                throw;
+            }
         }
 
         private async void addExamToolStripMenuItem_Click(object sender, EventArgs e)

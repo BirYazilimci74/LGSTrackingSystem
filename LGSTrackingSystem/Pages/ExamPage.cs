@@ -118,15 +118,24 @@ namespace LGSTrackingSystem.Pages
                 var student = await _studentService.GetStudentByIdAsync(_studentId);
                 if (student is null)
                 {
-                    MessageBox.Show("Student not found.");
+                    MessageBox.Show("Student not found");
                     return;
                 }
                 _student = student;
             }
 
-            _examService.AddExamToStudent(_student, newExam);
-            MessageBox.Show("Exam added successfully.");
-            this.DialogResult = DialogResult.OK;
+            try
+            {
+                _examService.AddExamToStudent(_student, newExam);
+                MessageBox.Show("Exam added successfully");
+                this.DialogResult = DialogResult.OK;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Exam could not added");
+                throw;
+            }
+            
         }
 
         private void btnOK_Click(object sender, EventArgs e)

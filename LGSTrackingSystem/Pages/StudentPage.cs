@@ -16,23 +16,31 @@ namespace LGSTrackingSystem.Pages
             _studentService = new StudentService();
         }
 
-        private void StudentPage_Load(object sender, EventArgs e)
+        private async void StudentPage_Load(object sender, EventArgs e)
         {
             this.Text = $"Welcome, {_student.FirstName} {_student.LastName}";
-            LoadExamResults();
+            await LoadExamResults();
         }
 
-        private void btnAddExam_Click(object sender, EventArgs e)
+        private async void btnAddExam_Click(object sender, EventArgs e)
         {
             ExamPage examPage = new ExamPage(_student);
             examPage.ShowDialog();
-            LoadExamResults();
+            await LoadExamResults();
         }
 
-        private async void LoadExamResults()
+        private async Task LoadExamResults()
         {
-            _exams = await _studentService.GetExamsFromStudent(_student.Id);
-            dgwExamList.DataSource = _exams.Select(e => e.ToExamResultDTO()).ToList();
+            try
+            {
+                _exams = await _studentService.GetExamsFromStudent(_student.Id);
+                dgwExamList.DataSource = _exams.Select(e => e.ToExamResultDTO()).ToList();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Exams could not list");
+                throw;
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -42,11 +50,11 @@ namespace LGSTrackingSystem.Pages
             this.Close();
         }
 
-        private void addExamToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void addExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExamPage examPage = new ExamPage(_student);
             examPage.ShowDialog();
-            LoadExamResults();
+            await LoadExamResults();
         }
     }
 }

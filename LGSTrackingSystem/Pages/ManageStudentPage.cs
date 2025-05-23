@@ -34,12 +34,12 @@ namespace LGSTrackingSystem.Pages
 
         private void ManageStudentPage_Load(object sender, EventArgs e)
         {
-            tbxFirstName.Leave += (s, e) => CheckFields(s, e, lblFirstNameMsg);
-            tbxLastName.Leave += (s, e) => CheckFields(s, e, lblLastNameMsg);
-            tbxEmail.Leave += (s, e) => CheckFields(s, e, lblEmailMsg);
-            msktbxPhone.Leave += (s, e) => CheckFields(s, e, lblPhoneMsg);
-            tbxSchoolName.Leave += (s, e) => CheckFields(s, e, lblSchoolNameMsg);
-            tbxClass.Leave += (s, e) => CheckFields(s, e, lblClassMsg);
+            tbxFirstName.Leave += (s, e) => CheckFieldsEvent(s, e, lblFirstNameMsg);
+            tbxLastName.Leave += (s, e) => CheckFieldsEvent(s, e, lblLastNameMsg);
+            tbxEmail.Leave += (s, e) => CheckFieldsEvent(s, e, lblEmailMsg);
+            msktbxPhone.Leave += (s, e) => CheckFieldsEvent(s, e, lblPhoneMsg);
+            tbxSchoolName.Leave += (s, e) => CheckFieldsEvent(s, e, lblSchoolNameMsg);
+            tbxClass.Leave += (s, e) => CheckFieldsEvent(s, e, lblClassMsg);
         }
 
         private async void btnOK_Click(object sender, EventArgs e)
@@ -155,7 +155,7 @@ namespace LGSTrackingSystem.Pages
             }
         }
 
-        public void CheckFields(object sender, EventArgs e, Label label)
+        public void CheckFieldsEvent(object sender, EventArgs e, Label label)
         {
             var textBox = sender as TextBox;
             if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))

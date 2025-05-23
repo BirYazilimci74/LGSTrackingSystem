@@ -21,11 +21,25 @@ namespace LGSTrackingSystem.UI.Pages
 
         private async void addExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var _student = await _studentService.GetStudentByIdAsync(_studentId);
-            ExamPage examPage = new ExamPage(_student);
-            examPage.Text = "Add Exam";
-            examPage.ShowDialog();
-            await LoadExams();
+            try
+            {
+                var _student = await _studentService.GetStudentByIdAsync(_studentId);
+                if (_student is null)
+                {
+                    MessageBox.Show("Select a student to add an exam");
+                    return;
+                }
+
+                ExamPage examPage = new ExamPage(_student);
+                examPage.Text = "Add Exam";
+                examPage.ShowDialog();
+                await LoadExams();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         private void editExamToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,26 +50,61 @@ namespace LGSTrackingSystem.UI.Pages
         private async void deleteExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var examId = Convert.ToInt32(dgwExamList.CurrentRow?.Cells["Id"].Value);
-            var exam = await _examService.GetByIdAsync(examId);
-            _examService.DeleteExam(exam);
-            await LoadExams();
+            if (examId == 0)
+            {
+                MessageBox.Show("Select an exam to delete");
+                return;
+            }
+
+            try
+            {
+                var exam = await _examService.GetByIdAsync(examId);
+                if (exam is null)
+                {
+                    MessageBox.Show("Exam not found");
+                    return;
+                }
+
+                _examService.DeleteExam(exam);
+                await LoadExams();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private async void ExamListPage_Load(object sender, EventArgs e)
         {
-            var _student = await _studentService.GetStudentByIdAsync(_studentId);
-            this.Text = $"Exam List for {_student?.FirstName} {_student?.LastName}";
+            try
+            {
+                var _student = await _studentService.GetStudentByIdAsync(_studentId);
+                this.Text = $"Exam List for {_student?.FirstName} {_student?.LastName}";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Student could not found");
+                throw;
+            }
             await LoadExams();
         }
 
         private async Task LoadExams()
         {
-            dgwExamList.DataSource = null;
-            var exams = await _studentService.GetExamsFromStudent(_studentId);
-            dgwExamList.DataSource = exams;
-            dgwExamList.Columns["Id"].Visible = false;
-            dgwExamList.Columns["Student"].Visible = false;
-            dgwExamList.Columns["StudentId"].Visible = false;
+            try
+            {
+                dgwExamList.DataSource = null;
+                var exams = await _studentService.GetExamsFromStudent(_studentId);
+                dgwExamList.DataSource = exams;
+                dgwExamList.Columns["Id"].Visible = false;
+                dgwExamList.Columns["Student"].Visible = false;
+                dgwExamList.Columns["StudentId"].Visible = false;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Exams could not list");
+                throw;
+            }
         }
     }
 }
