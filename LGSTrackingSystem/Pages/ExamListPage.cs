@@ -15,7 +15,7 @@ namespace LGSTrackingSystem.UI.Pages
             _studentId = studentId;
             _studentService = new StudentService();
             _examService = new ExamService();
-            
+
             InitializeComponent();
         }
 
@@ -39,12 +39,12 @@ namespace LGSTrackingSystem.UI.Pages
             {
                 throw;
             }
-            
+
         }
 
         private void editExamToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private async void deleteExamToolStripMenuItem_Click(object sender, EventArgs e)
@@ -95,16 +95,64 @@ namespace LGSTrackingSystem.UI.Pages
             {
                 dgwExamList.DataSource = null;
                 var exams = await _studentService.GetExamsFromStudent(_studentId);
-                dgwExamList.DataSource = exams;
+                var examsToShow = exams.Select(e => new
+                {
+                    e.Id,
+                    e.ExamDate,
+                    e.ExamName,
+                    e.TotalNet,
+                    e.Score
+                }).ToList();
+                dgwExamList.DataSource = examsToShow;
                 dgwExamList.Columns["Id"].Visible = false;
-                dgwExamList.Columns["Student"].Visible = false;
-                dgwExamList.Columns["StudentId"].Visible = false;
             }
             catch (Exception)
             {
                 MessageBox.Show("Exams could not list");
                 throw;
             }
+        }
+
+        private async void dgwExamList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var examId = Convert.ToInt32(dgwExamList.Rows[e.RowIndex].Cells["Id"].Value);
+                var exam = await _examService.GetByIdAsync(examId);
+                if (exam is null)
+                {
+                    MessageBox.Show("Exam not found");
+                    return;
+                }
+                FillExam(exam);
+            }
+        }
+
+        private void FillExam(Exam exam)
+        {
+            lblExamName.Text = exam.ExamName;
+            lblExamDate.Text = exam.ExamDate.ToString("dd/MM/yyyy");
+            
+            lblMathCorrect.Text = exam.MathCorrect.ToString();
+            lblMathIncorrect.Text = exam.MathIncorrect.ToString();
+            
+            lblScienceCorrect.Text = exam.ScienceCorrect.ToString();
+            lblScienceIncorrect.Text = exam.ScienceIncorrect.ToString();
+            
+            lblTurkishCorrect.Text = exam.TurkishCorrect.ToString();
+            lblTurkishIncorrect.Text = exam.TurkishIncorrect.ToString();
+            
+            lblHistoryCorrect.Text = exam.HistoryCorrect.ToString();
+            lblHistoryIncorrect.Text = exam.HistoryIncorrect.ToString();
+            
+            lblReligionCorrect.Text = exam.ReligionCorrect.ToString();
+            lblReligionIncorrect.Text = exam.ReligionIncorrect.ToString();
+            
+            lblEnglishCorrect.Text = exam.EnglishCorrect.ToString();
+            lblEnglishIncorrect.Text = exam.EnglishIncorrect.ToString();
+            
+            lblTotalNet.Text = exam.TotalNet.ToString();
+            lblScore.Text = exam.Score.ToString();
         }
     }
 }
