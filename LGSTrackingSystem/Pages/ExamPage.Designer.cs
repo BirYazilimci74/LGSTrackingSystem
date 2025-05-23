@@ -63,6 +63,11 @@
             dtpExamDate = new DateTimePicker();
             label11 = new Label();
             lblMsg = new Label();
+            tbxTotalNet = new TextBox();
+            tbxScore = new TextBox();
+            label12 = new Label();
+            label13 = new Label();
+            btnCalculate = new Button();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numEnglishIncorrect).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numEnglishCorrect).BeginInit();
@@ -491,16 +496,71 @@
             // 
             lblMsg.AutoSize = true;
             lblMsg.ForeColor = Color.Red;
-            lblMsg.Location = new Point(104, 369);
+            lblMsg.Location = new Point(101, 412);
             lblMsg.Name = "lblMsg";
             lblMsg.Size = new Size(0, 15);
             lblMsg.TabIndex = 19;
+            // 
+            // tbxTotalNet
+            // 
+            tbxTotalNet.Font = new Font("Segoe UI", 12F);
+            tbxTotalNet.Location = new Point(514, 369);
+            tbxTotalNet.Margin = new Padding(0);
+            tbxTotalNet.Name = "tbxTotalNet";
+            tbxTotalNet.ReadOnly = true;
+            tbxTotalNet.Size = new Size(144, 29);
+            tbxTotalNet.TabIndex = 29;
+            // 
+            // tbxScore
+            // 
+            tbxScore.Font = new Font("Segoe UI", 12F);
+            tbxScore.Location = new Point(514, 412);
+            tbxScore.Margin = new Padding(0);
+            tbxScore.Name = "tbxScore";
+            tbxScore.ReadOnly = true;
+            tbxScore.Size = new Size(144, 29);
+            tbxScore.TabIndex = 30;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Myanmar Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(454, 412);
+            label12.Name = "label12";
+            label12.Size = new Size(59, 29);
+            label12.TabIndex = 31;
+            label12.Text = "Score: ";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Myanmar Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(430, 369);
+            label13.Name = "label13";
+            label13.Size = new Size(83, 29);
+            label13.TabIndex = 32;
+            label13.Text = "Total Net: ";
+            // 
+            // btnCalculate
+            // 
+            btnCalculate.Location = new Point(101, 370);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new Size(127, 29);
+            btnCalculate.TabIndex = 33;
+            btnCalculate.Text = "Calculate";
+            btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // ExamPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(746, 576);
+            Controls.Add(btnCalculate);
+            Controls.Add(label13);
+            Controls.Add(label12);
+            Controls.Add(tbxScore);
+            Controls.Add(tbxTotalNet);
             Controls.Add(lblMsg);
             Controls.Add(label11);
             Controls.Add(dtpExamDate);
@@ -571,5 +631,10 @@
         private DateTimePicker dtpExamDate;
         private Label label11;
         private Label lblMsg;
+        private TextBox tbxTotalNet;
+        private TextBox tbxScore;
+        private Label label12;
+        private Label label13;
+        private Button btnCalculate;
     }
 }

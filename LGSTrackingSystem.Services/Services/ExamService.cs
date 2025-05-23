@@ -46,5 +46,10 @@ namespace LGSTrackingSystem.Services.Services
             var net = ((double)correct - ((double)incorrect / 3 + ((double)incorrect % 3) * 0.33));
             return net;
         }
+
+        public void CalculateScore()
+        {
+
+        }
     }
 }

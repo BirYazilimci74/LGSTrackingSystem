@@ -4,6 +4,7 @@ using LGSTrackingSystem.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LGSTrackingSystem.Repositories.Migrations
 {
     [DbContext(typeof(LGSTrackingDBContext))]
-    partial class LGSTrackingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250523095547_emptyAndTotalNet")]
+    partial class emptyAndTotalNet
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,9 +70,6 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("EnglishCorrect")
                         .HasColumnType("int");
 
-                    b.Property<int>("EnglishEmpty")
-                        .HasColumnType("int");
-
                     b.Property<int>("EnglishIncorrect")
                         .HasColumnType("int");
 
@@ -90,9 +90,6 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("HistoryCorrect")
                         .HasColumnType("int");
 
-                    b.Property<int>("HistoryEmpty")
-                        .HasColumnType("int");
-
                     b.Property<int>("HistoryIncorrect")
                         .HasColumnType("int");
 
@@ -100,9 +97,6 @@ namespace LGSTrackingSystem.Repositories.Migrations
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("MathCorrect")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MathEmpty")
                         .HasColumnType("int");
 
                     b.Property<int>("MathIncorrect")
@@ -114,9 +108,6 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("ReligionCorrect")
                         .HasColumnType("int");
 
-                    b.Property<int>("ReligionEmpty")
-                        .HasColumnType("int");
-
                     b.Property<int>("ReligionIncorrect")
                         .HasColumnType("int");
 
@@ -124,9 +115,6 @@ namespace LGSTrackingSystem.Repositories.Migrations
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<int>("ScienceCorrect")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ScienceEmpty")
                         .HasColumnType("int");
 
                     b.Property<int>("ScienceIncorrect")
@@ -141,13 +129,7 @@ namespace LGSTrackingSystem.Repositories.Migrations
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalNet")
-                        .HasColumnType("decimal(18, 2)");
-
                     b.Property<int>("TurkishCorrect")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TurkishEmpty")
                         .HasColumnType("int");
 
                     b.Property<int>("TurkishIncorrect")
