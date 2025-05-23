@@ -37,17 +37,14 @@ namespace LGSTrackingSystem.Services.Services
             return exam;
         }
 
-        public (bool,string) CheckAndCalculateNet(decimal correct, decimal incorrect, int maxNet)
+        public double? CheckAndCalculateNet(decimal correct, decimal incorrect, int maxNet)
         {
-            string strNet;
             if (correct + incorrect > maxNet)
             {
-                strNet = $"should be less than {maxNet}";
-                return (false,strNet);
+                return null;
             }
             var net = ((double)correct - ((double)incorrect / 3 + ((double)incorrect % 3) * 0.33));
-            strNet = net.ToString("0.00");
-            return (true,strNet);
+            return net;
         }
     }
 }

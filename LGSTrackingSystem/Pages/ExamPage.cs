@@ -34,63 +34,57 @@ namespace LGSTrackingSystem.Pages
 
             var mathCorrect = Convert.ToInt32(numMathCorrect.Value);
             var mathIncorrect = Convert.ToInt32(numMathIncorrect.Value);
-            var mathResult = _examService.CheckAndCalculateNet(mathCorrect, mathIncorrect, 20);
-            if (!mathResult.Item1)
+            double? matNet = _examService.CheckAndCalculateNet(mathCorrect, mathIncorrect, 20);
+            if (matNet is null)
             {
-                lblMsg.Text += "\nTotal math question " + mathResult.Item2;
+                lblMsg.Text += "\nTotal math question should be less that 20";
                 return;
             }
-            double matNet = Convert.ToDouble(mathResult.Item2);
 
             var scienceCorrect = Convert.ToInt32(numScienceCorrect.Value);
             var scienceIncorrect = Convert.ToInt32(numScienceIncorrect.Value);
-            var scienceResult = _examService.CheckAndCalculateNet(scienceCorrect, scienceIncorrect, 20);
-            if (!scienceResult.Item1)
+            double? scienceNet = _examService.CheckAndCalculateNet(scienceCorrect, scienceIncorrect, 20);
+            if (scienceNet is null)
             {
-                lblMsg.Text += "\nTotal science question " + scienceResult.Item2;
+                lblMsg.Text += "\nTotal science question should be less that 20";
                 return;
             }
-            double scienceNet = Convert.ToDouble(scienceResult.Item2);
 
             var turkishCorrect = Convert.ToInt32(numTurkishCorrect.Value);
             var turkishIncorrect = Convert.ToInt32(numTurkishIncorrect.Value);
-            var turkishResult = _examService.CheckAndCalculateNet(turkishCorrect, turkishIncorrect, 20);
-            if (!turkishResult.Item1)
+            double? turkishNet = _examService.CheckAndCalculateNet(turkishCorrect, turkishIncorrect, 20);
+            if (turkishNet is null)
             {
-                lblMsg.Text += "\nTotal turkish question " + turkishResult.Item2;
+                lblMsg.Text += "\nTotal turkish question should be less that 20";
                 return;
             }
-            double turkishNet = Convert.ToDouble(turkishResult.Item2);
 
             var historyCorrect = Convert.ToInt32(numHistoryCorrect.Value);
             var historyIncorrect = Convert.ToInt32(numHistoryIncorrect.Value);
-            var historyResult = _examService.CheckAndCalculateNet(historyCorrect, historyIncorrect, 10);
-            if (!historyResult.Item1)
+            double? historyNet = _examService.CheckAndCalculateNet(historyCorrect, historyIncorrect, 10);
+            if (historyNet is null)
             {
-                lblMsg.Text += "\nTotal history question " + historyResult.Item2;
+                lblMsg.Text += "\nTotal history question should be less that 10";
                 return;
             }
-            double historyNet = Convert.ToDouble(historyResult.Item2);
 
             var religionCorrect = Convert.ToInt32(numReligionCorrect.Value);
             var religionIncorrect = Convert.ToInt32(numReligionIncorrect.Value);
-            var religionResult = _examService.CheckAndCalculateNet(religionCorrect, religionIncorrect, 10);
-            if (!religionResult.Item1)
+            double? religionNet = _examService.CheckAndCalculateNet(religionCorrect, religionIncorrect, 10);
+            if (religionNet is null)
             {
-                lblMsg.Text += "\nTotal religion question " + religionResult.Item2;
+                lblMsg.Text += "\nTotal religion question should be less that 10";
                 return;
             }
-            double religionNet = Convert.ToDouble(religionResult.Item2);
 
             var englishCorrect = Convert.ToInt32(numEnglishCorrect.Value);
             var englishIncorrect = Convert.ToInt32(numEnglishIncorrect.Value);
-            var englishResult = _examService.CheckAndCalculateNet(englishCorrect, englishIncorrect, 10);
-            if (!englishResult.Item1)
+            double? englishNet = _examService.CheckAndCalculateNet(englishCorrect, englishIncorrect, 10);
+            if (englishNet is null)
             {
-                lblMsg.Text += "\nTotal english question " + englishResult.Item2;
+                lblMsg.Text += "\nTotal english question should be less that 10";
                 return;
             }
-            double englishNet = Convert.ToDouble(englishResult.Item2);
 
             var newExam = new Exam
             {
@@ -100,27 +94,27 @@ namespace LGSTrackingSystem.Pages
 
                 MathCorrect = mathCorrect,
                 MathIncorrect = mathIncorrect,
-                MathNet = matNet,
+                MathNet = matNet ?? 0,
 
                 ScienceCorrect = scienceCorrect,
                 ScienceIncorrect = scienceIncorrect,
-                ScienceNet = scienceNet,
+                ScienceNet = scienceNet ?? 0,
 
                 TurkishCorrect = turkishCorrect,
                 TurkishIncorrect = turkishIncorrect,
-                TurkishNet = turkishNet,
+                TurkishNet = turkishNet ?? 0,
 
                 HistoryCorrect = historyCorrect,
                 HistoryIncorrect = historyIncorrect,
-                HistoryNet = historyNet,
+                HistoryNet = historyNet ?? 0,
 
                 ReligionCorrect = religionCorrect,
                 ReligionIncorrect = religionIncorrect,
-                ReligionNet = religionNet,
+                ReligionNet = religionNet ?? 0,
 
                 EnglishCorrect = englishCorrect,
                 EnglishIncorrect = englishIncorrect,
-                EnglishNet = englishNet,
+                EnglishNet = englishNet ?? 0,
 
                 StudentId = _student?.Id ?? _studentId,
             };
@@ -154,39 +148,39 @@ namespace LGSTrackingSystem.Pages
         private void ExamPage_Load(object sender, EventArgs e)
         {
             numMathCorrect.Leave += (s, e)
-                => EnterNet(tbxMathNet, _examService.CheckAndCalculateNet(numMathCorrect.Value, numMathIncorrect.Value, 20).Item2);
+                => EnterNet(tbxMathNet, _examService.CheckAndCalculateNet(numMathCorrect.Value, numMathIncorrect.Value, 20));
             numMathIncorrect.Leave += (s, e)
-                => EnterNet(tbxMathNet, _examService.CheckAndCalculateNet(numMathCorrect.Value, numMathIncorrect.Value, 20).Item2);
+                => EnterNet(tbxMathNet, _examService.CheckAndCalculateNet(numMathCorrect.Value, numMathIncorrect.Value, 20));
 
             numScienceCorrect.Leave += (s, e)
-                => EnterNet(tbxScienceNet, _examService.CheckAndCalculateNet(numScienceCorrect.Value, numScienceIncorrect.Value, 20).Item2);
+                => EnterNet(tbxScienceNet, _examService.CheckAndCalculateNet(numScienceCorrect.Value, numScienceIncorrect.Value, 20));
             numScienceIncorrect.Leave += (s, e)
-                => EnterNet(tbxScienceNet, _examService.CheckAndCalculateNet(numScienceCorrect.Value, numScienceIncorrect.Value, 20).Item2);
+                => EnterNet(tbxScienceNet, _examService.CheckAndCalculateNet(numScienceCorrect.Value, numScienceIncorrect.Value, 20));
 
             numTurkishCorrect.Leave += (s, e)
-                => EnterNet(tbxTurkishNet, _examService.CheckAndCalculateNet(numTurkishCorrect.Value, numTurkishIncorrect.Value, 20).Item2);
+                => EnterNet(tbxTurkishNet, _examService.CheckAndCalculateNet(numTurkishCorrect.Value, numTurkishIncorrect.Value, 20));
             numTurkishIncorrect.Leave += (s, e)
-                => EnterNet(tbxTurkishNet, _examService.CheckAndCalculateNet(numTurkishCorrect.Value, numTurkishIncorrect.Value, 20).Item2);
+                => EnterNet(tbxTurkishNet, _examService.CheckAndCalculateNet(numTurkishCorrect.Value, numTurkishIncorrect.Value, 20));
 
             numHistoryCorrect.Leave += (s, e)
-                => EnterNet(tbxHistoryNet, _examService.CheckAndCalculateNet(numHistoryCorrect.Value, numHistoryIncorrect.Value, 10).Item2);
+                => EnterNet(tbxHistoryNet, _examService.CheckAndCalculateNet(numHistoryCorrect.Value, numHistoryIncorrect.Value, 10));
             numHistoryIncorrect.Leave += (s, e)
-                => EnterNet(tbxHistoryNet, _examService.CheckAndCalculateNet(numHistoryCorrect.Value, numHistoryIncorrect.Value, 10).Item2);
+                => EnterNet(tbxHistoryNet, _examService.CheckAndCalculateNet(numHistoryCorrect.Value, numHistoryIncorrect.Value, 10));
 
             numReligionCorrect.Leave += (s, e)
-                => EnterNet(tbxReligionNet, _examService.CheckAndCalculateNet(numReligionCorrect.Value, numReligionIncorrect.Value, 10).Item2);
+                => EnterNet(tbxReligionNet, _examService.CheckAndCalculateNet(numReligionCorrect.Value, numReligionIncorrect.Value, 10));
             numReligionIncorrect.Leave += (s, e)
-                => EnterNet(tbxReligionNet, _examService.CheckAndCalculateNet(numReligionCorrect.Value, numReligionIncorrect.Value, 10).Item2);
+                => EnterNet(tbxReligionNet, _examService.CheckAndCalculateNet(numReligionCorrect.Value, numReligionIncorrect.Value, 10));
 
             numEnglishCorrect.Leave += (s, e)
-                => EnterNet(tbxEnglishNet, _examService.CheckAndCalculateNet(numEnglishCorrect.Value, numEnglishIncorrect.Value, 10).Item2);
+                => EnterNet(tbxEnglishNet, _examService.CheckAndCalculateNet(numEnglishCorrect.Value, numEnglishIncorrect.Value, 10));
             numEnglishIncorrect.Leave += (s, e)
-                => EnterNet(tbxEnglishNet, _examService.CheckAndCalculateNet(numEnglishCorrect.Value, numEnglishIncorrect.Value, 10).Item2);
+                => EnterNet(tbxEnglishNet, _examService.CheckAndCalculateNet(numEnglishCorrect.Value, numEnglishIncorrect.Value, 10));
         }
 
-        private void EnterNet(TextBox tbx, string net)
+        private void EnterNet(TextBox tbx, double? net)
         {
-            tbx.Text = net;
+            tbx.Text = $"{net ?? 0.00}";
         }
     }
 }
