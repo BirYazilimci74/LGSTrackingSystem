@@ -80,10 +80,10 @@
             lblExamDate = new Label();
             btnExport = new Button();
             tableLayoutPanel13 = new TableLayoutPanel();
+            lblScore = new Label();
+            lblTotalNet = new Label();
             label3 = new Label();
             label4 = new Label();
-            lblTotalNet = new Label();
-            lblScore = new Label();
             examContextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
             tableLayoutPanel7.SuspendLayout();
@@ -698,6 +698,7 @@
             btnExport.TabIndex = 15;
             btnExport.Text = "Export";
             btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
             // 
             // tableLayoutPanel13
             // 
@@ -716,6 +717,28 @@
             tableLayoutPanel13.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel13.Size = new Size(200, 46);
             tableLayoutPanel13.TabIndex = 16;
+            // 
+            // lblScore
+            // 
+            lblScore.AutoSize = true;
+            lblScore.Dock = DockStyle.Fill;
+            lblScore.Location = new Point(103, 23);
+            lblScore.Name = "lblScore";
+            lblScore.Size = new Size(93, 22);
+            lblScore.TabIndex = 3;
+            lblScore.Text = "0.00";
+            lblScore.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblTotalNet
+            // 
+            lblTotalNet.AutoSize = true;
+            lblTotalNet.Dock = DockStyle.Fill;
+            lblTotalNet.Location = new Point(4, 23);
+            lblTotalNet.Name = "lblTotalNet";
+            lblTotalNet.Size = new Size(92, 22);
+            lblTotalNet.TabIndex = 2;
+            lblTotalNet.Text = "0.00";
+            lblTotalNet.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -738,28 +761,6 @@
             label4.TabIndex = 1;
             label4.Text = "Score";
             label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblTotalNet
-            // 
-            lblTotalNet.AutoSize = true;
-            lblTotalNet.Dock = DockStyle.Fill;
-            lblTotalNet.Location = new Point(4, 23);
-            lblTotalNet.Name = "lblTotalNet";
-            lblTotalNet.Size = new Size(92, 22);
-            lblTotalNet.TabIndex = 2;
-            lblTotalNet.Text = "0.00";
-            lblTotalNet.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblScore
-            // 
-            lblScore.AutoSize = true;
-            lblScore.Dock = DockStyle.Fill;
-            lblScore.Location = new Point(103, 23);
-            lblScore.Name = "lblScore";
-            lblScore.Size = new Size(93, 22);
-            lblScore.TabIndex = 3;
-            lblScore.Text = "0.00";
-            lblScore.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ExamListPage
             // 

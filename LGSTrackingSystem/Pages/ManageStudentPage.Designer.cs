@@ -33,7 +33,6 @@
             tbxEmail = new TextBox();
             tbxSchoolName = new TextBox();
             msktbxPhone = new MaskedTextBox();
-            tbxClass = new TextBox();
             btnOK = new Button();
             btnCancel = new Button();
             lblFirstNameMsg = new Label();
@@ -42,6 +41,7 @@
             lblSchoolNameMsg = new Label();
             lblClassMsg = new Label();
             lblLastNameMsg = new Label();
+            cbxClass = new ComboBox();
             SuspendLayout();
             // 
             // tbxFirstName
@@ -90,7 +90,7 @@
             tbxSchoolName.Name = "tbxSchoolName";
             tbxSchoolName.PlaceholderText = "School Name";
             tbxSchoolName.RightToLeft = RightToLeft.No;
-            tbxSchoolName.Size = new Size(217, 32);
+            tbxSchoolName.Size = new Size(155, 32);
             tbxSchoolName.TabIndex = 5;
             // 
             // msktbxPhone
@@ -104,18 +104,6 @@
             msktbxPhone.RightToLeft = RightToLeft.No;
             msktbxPhone.Size = new Size(217, 32);
             msktbxPhone.TabIndex = 4;
-            // 
-            // tbxClass
-            // 
-            tbxClass.BorderStyle = BorderStyle.FixedSingle;
-            tbxClass.Font = new Font("Myanmar Text", 9.75F);
-            tbxClass.Location = new Point(100, 270);
-            tbxClass.Margin = new Padding(0);
-            tbxClass.Name = "tbxClass";
-            tbxClass.PlaceholderText = "Class";
-            tbxClass.RightToLeft = RightToLeft.No;
-            tbxClass.Size = new Size(217, 32);
-            tbxClass.TabIndex = 6;
             // 
             // btnOK
             // 
@@ -168,7 +156,7 @@
             // 
             lblSchoolNameMsg.AutoSize = true;
             lblSchoolNameMsg.ForeColor = Color.Red;
-            lblSchoolNameMsg.Location = new Point(320, 237);
+            lblSchoolNameMsg.Location = new Point(100, 272);
             lblSchoolNameMsg.Name = "lblSchoolNameMsg";
             lblSchoolNameMsg.Size = new Size(0, 21);
             lblSchoolNameMsg.TabIndex = 13;
@@ -177,7 +165,7 @@
             // 
             lblClassMsg.AutoSize = true;
             lblClassMsg.ForeColor = Color.Red;
-            lblClassMsg.Location = new Point(320, 277);
+            lblClassMsg.Location = new Point(263, 272);
             lblClassMsg.Name = "lblClassMsg";
             lblClassMsg.Size = new Size(0, 21);
             lblClassMsg.TabIndex = 14;
@@ -191,11 +179,20 @@
             lblLastNameMsg.Size = new Size(0, 21);
             lblLastNameMsg.TabIndex = 10;
             // 
+            // cbxClass
+            // 
+            cbxClass.FormattingEnabled = true;
+            cbxClass.Location = new Point(264, 230);
+            cbxClass.Name = "cbxClass";
+            cbxClass.Size = new Size(54, 29);
+            cbxClass.TabIndex = 16;
+            // 
             // ManageStudentPage
             // 
             AutoScaleDimensions = new SizeF(7F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(441, 409);
+            Controls.Add(cbxClass);
             Controls.Add(lblClassMsg);
             Controls.Add(lblSchoolNameMsg);
             Controls.Add(lblPhoneMsg);
@@ -204,7 +201,6 @@
             Controls.Add(lblFirstNameMsg);
             Controls.Add(btnCancel);
             Controls.Add(btnOK);
-            Controls.Add(tbxClass);
             Controls.Add(msktbxPhone);
             Controls.Add(tbxSchoolName);
             Controls.Add(tbxEmail);
@@ -228,7 +224,6 @@
         private TextBox tbxEmail;
         private TextBox tbxSchoolName;
         private MaskedTextBox msktbxPhone;
-        private TextBox tbxClass;
         private Button btnOK;
         private Button btnCancel;
         private Label lblFirstNameMsg;
@@ -237,5 +232,6 @@
         private Label lblSchoolNameMsg;
         private Label lblClassMsg;
         private Label lblLastNameMsg;
+        private ComboBox cbxClass;
     }
 }

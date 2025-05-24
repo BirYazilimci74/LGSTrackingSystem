@@ -11,7 +11,14 @@ namespace LGSTrackingSystem.Domain.Models
         public required string Email { get; set; }
         public required string PhoneNumber { get; set; }
         public required string SchoolName { get; set; }
-        public required string Class { get; set; }
+        private string? _class;
+
+        public required string Class
+        {
+            get { return _class ?? "8A"; }
+            set { _class = $"8{value}"; }
+        }
+
         public required int UserId { get; set; }
         public User User { get; set; }
         public List<Exam> Exams { get; set; } = new List<Exam>();

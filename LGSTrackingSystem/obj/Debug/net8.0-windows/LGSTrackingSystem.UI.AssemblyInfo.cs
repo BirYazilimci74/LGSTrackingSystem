@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LGSTrackingSystem.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff842087a701c8f2aec28c239948a2aaab730173")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+237b17554c078f969051332607101d4430e8f352")]
 [assembly: System.Reflection.AssemblyProductAttribute("LGSTrackingSystem.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LGSTrackingSystem.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

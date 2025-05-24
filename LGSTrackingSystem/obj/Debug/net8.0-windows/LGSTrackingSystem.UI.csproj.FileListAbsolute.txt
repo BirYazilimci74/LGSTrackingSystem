@@ -68,6 +68,25 @@ C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem\bin\Debu
 C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Repositories.pdb
 C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Services.dll
 C:\Users\yahya\Desktop\Software\C#\Form Uygulamaları\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Services.pdb
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Bold.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-BoldItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraBold.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraBoldItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraLight.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraLightItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Italic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Light.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-LightItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Medium.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-MediumItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Regular.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-SemiBold.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-SemiBoldItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-Thin.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\Lato-ThinItalic.ttf
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LatoFont\OFL.txt
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.UI.exe
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.UI.deps.json
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.UI.runtimeconfig.json
@@ -99,6 +118,7 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\QuestPDF.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\System.ClientModel.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\System.Formats.Asn1.dll
@@ -114,6 +134,36 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libQuestPdfSkia.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libcrypto.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libjpeg.so.8
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libqpdf.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libcrypto.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libjpeg.so.8
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libqpdf.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libQuestPdfSkia.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libcrypto.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libjpeg.so.8
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libqpdf.so
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libcrypto.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libjpeg.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libqpdf.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libcrypto.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libjpeg.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libqpdf.dylib
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\QuestPdfSkia.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\libgcc_s_seh-1.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\libstdc++-6.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\libwinpthread-1.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x64\native\qpdf.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\QuestPdfSkia.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\libstdc++-6.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Core.dll
@@ -126,8 +176,10 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LGSTrackingSystem.Core.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.csproj.AssemblyReference.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.AdminPage.resources
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.Pages.ExamListPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.ExamPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.LoginPage.resources
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.ManageStudentPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.RegisterPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.StudentPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.csproj.GenerateResource.cache
@@ -142,5 +194,3 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.genruntimeconfig.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\ref\LGSTrackingSystem.UI.dll
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.ManageStudentPage.resources
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.Pages.ExamListPage.resources

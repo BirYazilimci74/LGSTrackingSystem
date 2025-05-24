@@ -29,7 +29,7 @@ namespace LGSTrackingSystem.Pages
             tbxEmail.Text = student.Email;
             msktbxPhone.Text = student.PhoneNumber;
             tbxSchoolName.Text = student.SchoolName;
-            tbxClass.Text = student.Class;
+            cbxClass.Text = student.Class.Substring(1);
         }
 
         private void ManageStudentPage_Load(object sender, EventArgs e)
@@ -39,7 +39,8 @@ namespace LGSTrackingSystem.Pages
             tbxEmail.Leave += (s, e) => CheckFieldsEvent(s, e, lblEmailMsg);
             msktbxPhone.Leave += (s, e) => CheckFieldsEvent(s, e, lblPhoneMsg);
             tbxSchoolName.Leave += (s, e) => CheckFieldsEvent(s, e, lblSchoolNameMsg);
-            tbxClass.Leave += (s, e) => CheckFieldsEvent(s, e, lblClassMsg);
+            cbxClass.Leave += (s, e) => CheckFieldsEvent(s, e, lblClassMsg);
+            cbxClass.DataSource = new List<string> { "A", "B", "C", "D", "E" , "F" , "G" , "H"};
         }
 
         private async void btnOK_Click(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace LGSTrackingSystem.Pages
                     Email = tbxEmail.Text,
                     PhoneNumber = msktbxPhone.Text,
                     SchoolName = tbxSchoolName.Text,
-                    Class = tbxClass.Text,
+                    Class = cbxClass.Text,
                     UserId = userId,
                 };
 
@@ -113,7 +114,7 @@ namespace LGSTrackingSystem.Pages
                     existingStudent.Email = tbxEmail.Text;
                     existingStudent.PhoneNumber = msktbxPhone.Text;
                     existingStudent.SchoolName = tbxSchoolName.Text;
-                    existingStudent.Class = tbxClass.Text;
+                    existingStudent.Class = cbxClass.Text;
 
                     await _studentService.UpdateStudentAsync(studentId, existingStudent);
                     return true;
@@ -139,17 +140,24 @@ namespace LGSTrackingSystem.Pages
                 string.IsNullOrWhiteSpace(tbxEmail.Text) ||
                 string.IsNullOrWhiteSpace(msktbxPhone.Text) ||
                 string.IsNullOrWhiteSpace(tbxSchoolName.Text) ||
-                string.IsNullOrWhiteSpace(tbxClass.Text))
+                string.IsNullOrWhiteSpace(cbxClass.Text) ||
+                CheckEmailFormat(tbxEmail.Text))
             {
                 return false;
             }
             return true;
         }
 
-        private void tbxEmail_Leave(object sender, EventArgs e)
+        private bool CheckEmailFormat(string email)
         {
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            if (!Regex.IsMatch(tbxEmail.Text, pattern))
+            return Regex.IsMatch(email, pattern);
+        }
+
+        private void tbxEmail_Leave(object sender, EventArgs e)
+        {
+            lblEmailMsg.Text = string.Empty;
+            if (!CheckEmailFormat(tbxEmail.Text))
             {
                 lblEmailMsg.Text = "Invalid email format";
             }
@@ -157,8 +165,10 @@ namespace LGSTrackingSystem.Pages
 
         public void CheckFieldsEvent(object sender, EventArgs e, Label label)
         {
+            label.Text = string.Empty;
             var textBox = sender as TextBox;
-            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text))
+            var dudClass = sender as DomainUpDown;
+            if (textBox != null && string.IsNullOrWhiteSpace(textBox.Text) || string.Equals(dudClass?.Text,"Class"))
             {
                 label.Text = "Can NOT be empty";
             }

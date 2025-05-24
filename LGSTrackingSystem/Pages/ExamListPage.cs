@@ -132,27 +132,54 @@ namespace LGSTrackingSystem.UI.Pages
         {
             lblExamName.Text = exam.ExamName;
             lblExamDate.Text = exam.ExamDate.ToString("dd/MM/yyyy");
-            
+
             lblMathCorrect.Text = exam.MathCorrect.ToString();
             lblMathIncorrect.Text = exam.MathIncorrect.ToString();
-            
+
             lblScienceCorrect.Text = exam.ScienceCorrect.ToString();
             lblScienceIncorrect.Text = exam.ScienceIncorrect.ToString();
-            
+
             lblTurkishCorrect.Text = exam.TurkishCorrect.ToString();
             lblTurkishIncorrect.Text = exam.TurkishIncorrect.ToString();
-            
+
             lblHistoryCorrect.Text = exam.HistoryCorrect.ToString();
             lblHistoryIncorrect.Text = exam.HistoryIncorrect.ToString();
-            
+
             lblReligionCorrect.Text = exam.ReligionCorrect.ToString();
             lblReligionIncorrect.Text = exam.ReligionIncorrect.ToString();
-            
+
             lblEnglishCorrect.Text = exam.EnglishCorrect.ToString();
             lblEnglishIncorrect.Text = exam.EnglishIncorrect.ToString();
-            
+
             lblTotalNet.Text = exam.TotalNet.ToString();
             lblScore.Text = exam.Score.ToString();
+        }
+
+        private async void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var pathToPDF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+                if (dgwExamList.CurrentRow is null)
+                {
+                    MessageBox.Show("Select an exam to export");
+                    return;
+                }
+                var examId = Convert.ToInt32(dgwExamList.CurrentRow.Cells["Id"].Value);
+                if (examId == 0)
+                {
+                    MessageBox.Show("Select an exam to export");
+                    return;
+                }
+                var exam = await _examService.GetByIdAsync(examId);
+                _examService.ExportPDF(exam, pathToPDF);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Exam could not exported to PDF. \n{ex}");
+                throw;
+            }
+            MessageBox.Show("Exam exported successfully to PDF. Check your desktop for the file.");
         }
     }
 }
