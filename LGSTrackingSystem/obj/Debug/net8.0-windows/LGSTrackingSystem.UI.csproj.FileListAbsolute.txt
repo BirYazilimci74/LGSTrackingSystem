@@ -183,7 +183,6 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.RegisterPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.Pages.StudentPage.resources
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.csproj.GenerateResource.cache
-C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.AssemblyInfoInputs.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.AssemblyInfo.cs
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.csproj.CoreCompileInputs.cache
@@ -194,3 +193,7 @@ C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-wind
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.pdb
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.genruntimeconfig.cache
 C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\ref\LGSTrackingSystem.UI.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\obj\Debug\net8.0-windows\LGSTrackingSystem.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LiveCharts.WinForms.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
+C:\Users\yahya\Desktop\LGSTrackingSystem\LGSTrackingSystem\bin\Debug\net8.0-windows\LiveCharts.dll

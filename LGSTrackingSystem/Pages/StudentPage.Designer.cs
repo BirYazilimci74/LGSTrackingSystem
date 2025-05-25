@@ -36,7 +36,9 @@
             examContextMenu = new ContextMenuStrip(components);
             addExamToolStripMenuItem = new ToolStripMenuItem();
             tabPage2 = new TabPage();
-            label2 = new Label();
+            chartLesson = new LiveCharts.WinForms.CartesianChart();
+            chartGeneral = new LiveCharts.WinForms.CartesianChart();
+            tabPage3 = new TabPage();
             tbCtrl.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwExamList).BeginInit();
@@ -48,6 +50,7 @@
             // 
             tbCtrl.Controls.Add(tabPage1);
             tbCtrl.Controls.Add(tabPage2);
+            tbCtrl.Controls.Add(tabPage3);
             tbCtrl.Dock = DockStyle.Fill;
             tbCtrl.Location = new Point(0, 0);
             tbCtrl.Name = "tbCtrl";
@@ -113,23 +116,43 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(label2);
-            tabPage2.Location = new Point(4, 24);
+            tabPage2.Controls.Add(chartLesson);
+            tabPage2.Controls.Add(chartGeneral);
+            tabPage2.Location = new Point(4, 29);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(789, 453);
+            tabPage2.Size = new Size(789, 448);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "My Profile";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // chartLesson
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(333, 140);
-            label2.Name = "label2";
-            label2.Size = new Size(40, 20);
-            label2.TabIndex = 0;
-            label2.Text = "label2";
+            chartLesson.Dock = DockStyle.Bottom;
+            chartLesson.Location = new Point(3, 233);
+            chartLesson.Name = "chartLesson";
+            chartLesson.Size = new Size(783, 212);
+            chartLesson.TabIndex = 1;
+            chartLesson.Text = "Lession Chart";
+            // 
+            // chartGeneral
+            // 
+            chartGeneral.Dock = DockStyle.Top;
+            chartGeneral.Location = new Point(3, 3);
+            chartGeneral.Name = "chartGeneral";
+            chartGeneral.Size = new Size(783, 196);
+            chartGeneral.TabIndex = 0;
+            chartGeneral.Text = "General Chart";
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(789, 453);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // StudentPage
             // 
@@ -150,7 +173,6 @@
             ((System.ComponentModel.ISupportInitialize)dgwExamList).EndInit();
             examContextMenu.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -159,10 +181,12 @@
         private TabControl tbCtrl;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Label label2;
         private DataGridView dgwExamList;
         private Button btnLogout;
         private ContextMenuStrip examContextMenu;
         private ToolStripMenuItem addExamToolStripMenuItem;
+        private TabPage tabPage3;
+        private LiveCharts.WinForms.CartesianChart chartLesson;
+        private LiveCharts.WinForms.CartesianChart chartGeneral;
     }
 }
