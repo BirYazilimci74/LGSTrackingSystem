@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LGSTrackingSystem.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe1f90d65db5d91ce8e6ecfcc83f15f61798f369")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65914f345cd5e32e1dcc0811d651efd6efe639cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("LGSTrackingSystem.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LGSTrackingSystem.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

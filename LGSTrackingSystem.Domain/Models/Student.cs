@@ -13,10 +13,16 @@ namespace LGSTrackingSystem.Domain.Models
         public required string SchoolName { get; set; }
         private string? _class;
 
-        public required string Class
+        public string Class
         {
-            get { return _class ?? "8A"; }
-            set { _class = $"8{value}"; }
+            get => $"8-{_class}";
+            set
+            {
+                if (value.StartsWith("8-"))
+                    _class = value.Substring(2);
+                else
+                    _class = value;
+            }
         }
 
         public required int UserId { get; set; }
