@@ -86,7 +86,7 @@ namespace LGSTrackingSystem.Pages
             await LoadStudents();
         }
 
-        private void listExamsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgwStudentList.CurrentRow == null)
             {

@@ -102,35 +102,35 @@
             // 
             studentContextMenu.Items.AddRange(new ToolStripItem[] { addExamToolStripMenuItem, editToolStripMenuItem, addStudentToolStripMenuItem, listExamsToolStripMenuItem });
             studentContextMenu.Name = "contextMenuStrip1";
-            studentContextMenu.Size = new Size(141, 92);
+            studentContextMenu.Size = new Size(181, 114);
             // 
             // addExamToolStripMenuItem
             // 
             addExamToolStripMenuItem.Name = "addExamToolStripMenuItem";
-            addExamToolStripMenuItem.Size = new Size(140, 22);
+            addExamToolStripMenuItem.Size = new Size(180, 22);
             addExamToolStripMenuItem.Text = "Add Exam";
             addExamToolStripMenuItem.Click += addExamToolStripMenuItem_Click;
             // 
             // editToolStripMenuItem
             // 
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(140, 22);
-            editToolStripMenuItem.Text = "Edit";
+            editToolStripMenuItem.Size = new Size(180, 22);
+            editToolStripMenuItem.Text = "Edit Student";
             editToolStripMenuItem.Click += editToolStripMenuItem_ClickAsync;
             // 
             // addStudentToolStripMenuItem
             // 
             addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem";
-            addStudentToolStripMenuItem.Size = new Size(140, 22);
+            addStudentToolStripMenuItem.Size = new Size(180, 22);
             addStudentToolStripMenuItem.Text = "Add Student";
             addStudentToolStripMenuItem.Click += addStudentToolStripMenuItem_ClickAsync;
             // 
             // listExamsToolStripMenuItem
             // 
             listExamsToolStripMenuItem.Name = "listExamsToolStripMenuItem";
-            listExamsToolStripMenuItem.Size = new Size(140, 22);
-            listExamsToolStripMenuItem.Text = "List Exams";
-            listExamsToolStripMenuItem.Click += listExamsToolStripMenuItem_Click;
+            listExamsToolStripMenuItem.Size = new Size(180, 22);
+            listExamsToolStripMenuItem.Text = "View Student";
+            listExamsToolStripMenuItem.Click += viewStudentToolStripMenuItem_Click;
             // 
             // tabPage2
             // 

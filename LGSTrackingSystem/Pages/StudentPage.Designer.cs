@@ -31,11 +31,18 @@
             components = new System.ComponentModel.Container();
             tbCtrl = new TabControl();
             tabPage1 = new TabPage();
+            btnExport = new Button();
             btnLogout = new Button();
             dgwExamList = new DataGridView();
             examContextMenu = new ContextMenuStrip(components);
             addExamToolStripMenuItem = new ToolStripMenuItem();
             tabPage2 = new TabPage();
+            chbxDisplayEnglish = new CheckBox();
+            chbxDisplayReligion = new CheckBox();
+            chbxDisplayHistory = new CheckBox();
+            chbxDisplayTurkish = new CheckBox();
+            chbxDisplayScience = new CheckBox();
+            chbxDisplayMath = new CheckBox();
             chartLesson = new LiveCharts.WinForms.CartesianChart();
             chartGeneral = new LiveCharts.WinForms.CartesianChart();
             tabPage3 = new TabPage();
@@ -60,6 +67,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(btnExport);
             tabPage1.Controls.Add(btnLogout);
             tabPage1.Controls.Add(dgwExamList);
             tabPage1.Location = new Point(4, 29);
@@ -69,6 +77,17 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Exams";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnExport
+            // 
+            btnExport.Font = new Font("Myanmar Text", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExport.Location = new Point(657, 399);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(126, 40);
+            btnExport.TabIndex = 3;
+            btnExport.Text = "Export";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
             // 
             // btnLogout
             // 
@@ -116,6 +135,12 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(chbxDisplayEnglish);
+            tabPage2.Controls.Add(chbxDisplayReligion);
+            tabPage2.Controls.Add(chbxDisplayHistory);
+            tabPage2.Controls.Add(chbxDisplayTurkish);
+            tabPage2.Controls.Add(chbxDisplayScience);
+            tabPage2.Controls.Add(chbxDisplayMath);
             tabPage2.Controls.Add(chartLesson);
             tabPage2.Controls.Add(chartGeneral);
             tabPage2.Location = new Point(4, 29);
@@ -123,15 +148,87 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(789, 448);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "My Profile";
+            tabPage2.Text = "Statistics";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // chbxDisplayEnglish
+            // 
+            chbxDisplayEnglish.AutoSize = true;
+            chbxDisplayEnglish.ForeColor = Color.DeepPink;
+            chbxDisplayEnglish.Location = new Point(689, 368);
+            chbxDisplayEnglish.Name = "chbxDisplayEnglish";
+            chbxDisplayEnglish.Size = new Size(66, 24);
+            chbxDisplayEnglish.TabIndex = 15;
+            chbxDisplayEnglish.Text = "English";
+            chbxDisplayEnglish.UseVisualStyleBackColor = true;
+            chbxDisplayEnglish.CheckedChanged += chbxDisplayEnglish_CheckedChanged;
+            // 
+            // chbxDisplayReligion
+            // 
+            chbxDisplayReligion.AutoSize = true;
+            chbxDisplayReligion.ForeColor = Color.DarkGreen;
+            chbxDisplayReligion.Location = new Point(689, 343);
+            chbxDisplayReligion.Name = "chbxDisplayReligion";
+            chbxDisplayReligion.Size = new Size(71, 24);
+            chbxDisplayReligion.TabIndex = 14;
+            chbxDisplayReligion.Text = "Religion";
+            chbxDisplayReligion.UseVisualStyleBackColor = true;
+            chbxDisplayReligion.CheckedChanged += chbxDisplayReligion_CheckedChanged;
+            // 
+            // chbxDisplayHistory
+            // 
+            chbxDisplayHistory.AutoSize = true;
+            chbxDisplayHistory.ForeColor = Color.Peru;
+            chbxDisplayHistory.Location = new Point(689, 318);
+            chbxDisplayHistory.Name = "chbxDisplayHistory";
+            chbxDisplayHistory.Size = new Size(64, 24);
+            chbxDisplayHistory.TabIndex = 13;
+            chbxDisplayHistory.Text = "History";
+            chbxDisplayHistory.UseVisualStyleBackColor = true;
+            chbxDisplayHistory.CheckedChanged += chbxDisplayHistory_CheckedChanged;
+            // 
+            // chbxDisplayTurkish
+            // 
+            chbxDisplayTurkish.AutoSize = true;
+            chbxDisplayTurkish.ForeColor = Color.DarkOrange;
+            chbxDisplayTurkish.Location = new Point(689, 293);
+            chbxDisplayTurkish.Name = "chbxDisplayTurkish";
+            chbxDisplayTurkish.Size = new Size(65, 24);
+            chbxDisplayTurkish.TabIndex = 12;
+            chbxDisplayTurkish.Text = "Turkish";
+            chbxDisplayTurkish.UseVisualStyleBackColor = true;
+            chbxDisplayTurkish.CheckedChanged += chbxDisplayTurkish_CheckedChanged;
+            // 
+            // chbxDisplayScience
+            // 
+            chbxDisplayScience.AutoSize = true;
+            chbxDisplayScience.ForeColor = Color.Lime;
+            chbxDisplayScience.Location = new Point(689, 268);
+            chbxDisplayScience.Name = "chbxDisplayScience";
+            chbxDisplayScience.Size = new Size(66, 24);
+            chbxDisplayScience.TabIndex = 11;
+            chbxDisplayScience.Text = "Science";
+            chbxDisplayScience.UseVisualStyleBackColor = true;
+            chbxDisplayScience.CheckedChanged += chbxDisplayScience_CheckedChanged;
+            // 
+            // chbxDisplayMath
+            // 
+            chbxDisplayMath.AutoSize = true;
+            chbxDisplayMath.ForeColor = Color.DodgerBlue;
+            chbxDisplayMath.Location = new Point(689, 243);
+            chbxDisplayMath.Name = "chbxDisplayMath";
+            chbxDisplayMath.Size = new Size(55, 24);
+            chbxDisplayMath.TabIndex = 10;
+            chbxDisplayMath.Text = "Math";
+            chbxDisplayMath.UseVisualStyleBackColor = true;
+            chbxDisplayMath.CheckedChanged += chbxDisplayMath_CheckedChanged;
             // 
             // chartLesson
             // 
-            chartLesson.Dock = DockStyle.Bottom;
-            chartLesson.Location = new Point(3, 233);
+            chartLesson.Dock = DockStyle.Left;
+            chartLesson.Location = new Point(3, 199);
             chartLesson.Name = "chartLesson";
-            chartLesson.Size = new Size(783, 212);
+            chartLesson.Size = new Size(654, 246);
             chartLesson.TabIndex = 1;
             chartLesson.Text = "Lession Chart";
             // 
@@ -146,12 +243,12 @@
             // 
             // tabPage3
             // 
-            tabPage3.Location = new Point(4, 24);
+            tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(789, 453);
+            tabPage3.Size = new Size(789, 448);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "tabPage3";
+            tabPage3.Text = "MyProfile";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // StudentPage
@@ -173,6 +270,7 @@
             ((System.ComponentModel.ISupportInitialize)dgwExamList).EndInit();
             examContextMenu.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -188,5 +286,12 @@
         private TabPage tabPage3;
         private LiveCharts.WinForms.CartesianChart chartLesson;
         private LiveCharts.WinForms.CartesianChart chartGeneral;
+        private CheckBox chbxDisplayEnglish;
+        private CheckBox chbxDisplayReligion;
+        private CheckBox chbxDisplayHistory;
+        private CheckBox chbxDisplayTurkish;
+        private CheckBox chbxDisplayScience;
+        private CheckBox chbxDisplayMath;
+        private Button btnExport;
     }
 }
