@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LGSTrackingSystem.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65914f345cd5e32e1dcc0811d651efd6efe639cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc419d58252f32a045bb665e3761dce3653f98a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("LGSTrackingSystem.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LGSTrackingSystem.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

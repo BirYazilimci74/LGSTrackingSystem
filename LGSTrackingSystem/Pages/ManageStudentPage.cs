@@ -163,13 +163,13 @@ namespace LGSTrackingSystem.Pages
 
         private void tbxEmail_Leave(object sender, EventArgs e)
         {
-            if (!CheckEmailFormat(tbxEmail.Text))
+            if (string.IsNullOrWhiteSpace(tbxEmail.Text))
+            {
+                lblEmailMsg.Text = "Can NOT be empty";
+            }
+            else if (!CheckEmailFormat(tbxEmail.Text))
             {
                 lblEmailMsg.Text = "Invalid email format";
-            }
-            else if (string.IsNullOrWhiteSpace(tbxEmail.Text))
-            {
-                lblEmailMsg.Text = "Email cannot be empty";
             }
             else
             {

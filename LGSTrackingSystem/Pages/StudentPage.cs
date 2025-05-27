@@ -33,6 +33,7 @@ namespace LGSTrackingSystem.Pages
             {
                 _exams = await _studentService.GetExamsFromStudent(_student.Id);
                 dgwExamList.DataSource = _exams.Select(e => e.ToExamResultDTO()).ToList();
+                dgwExamList.Columns["Id"].Visible = false;
             }
             catch (Exception)
             {
@@ -49,15 +50,10 @@ namespace LGSTrackingSystem.Pages
 
         private async Task GeneralChart()
         {
-            _exams = await _studentService.GetExamsFromStudent(_student.Id);
+            var exams = await _studentService.GetExamsFromStudent(_student.Id);
+            if (exams == null || !exams.Any()) return;
 
-            if (_exams == null || !_exams.Any())
-            {
-                MessageBox.Show("No exams found for this student.");
-                return;
-            }
-
-            var chartData = _exams
+            var chartData = exams
                 .OrderBy(e => e.ExamDate)
                 .Select(e => new
                 {
@@ -67,6 +63,16 @@ namespace LGSTrackingSystem.Pages
 
             var values = chartData.Select(e => e.TotalNet).ToArray();
             var labels = chartData.Select(e => e.ExamDate.ToString("dd/MM/yyyy")).ToList();
+
+            var maxValue = values.Max();
+            var maxYAxis = Math.Min(90, (int)(Math.Ceiling(maxValue / 5.0) * 5));
+            maxYAxis = maxYAxis <= 0 ? 5 : maxYAxis;
+
+            var yLabels = new List<string>();
+            for (int i = 0; i <= maxYAxis; i += 5)
+            {
+                yLabels.Add(i.ToString());
+            }
 
             chartGeneral.Series = new SeriesCollection
             {
@@ -95,8 +101,15 @@ namespace LGSTrackingSystem.Pages
             {
                 new Axis
                 {
-                    Labels = new List<string> {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60", "65", "70", "75", "80", "85", "90"},
                     Title = "Total Net",
+                    MaxValue = maxYAxis,
+                    MinValue = 0,
+                    LabelFormatter = value => value.ToString(),
+                    Separator = new Separator
+                    {
+                        Step = 5,
+                        IsEnabled = true
+                    }
                 }
             };
         }
@@ -157,6 +170,7 @@ namespace LGSTrackingSystem.Pages
             var maxYAxis = Math.Min(90, (int)(Math.Ceiling(maxValue / 5.0) * 5));
             var minValue = allVisibleValues.Any() ? allVisibleValues.Min() : 0;
             var minYAxis = Math.Min(0, (int)(Math.Floor(minValue / 5.0) * 5));
+            maxYAxis = maxYAxis <= 0 ? 5 : maxYAxis;
 
             var seriesCollection = new SeriesCollection();
 
@@ -311,6 +325,7 @@ namespace LGSTrackingSystem.Pages
             ExamPage examPage = new ExamPage(_student);
             examPage.ShowDialog();
             await LoadExamResults();
+            await LoadChartData();
         }
 
         private async void chbxDisplayMath_CheckedChanged(object sender, EventArgs e) => await LessionChart();

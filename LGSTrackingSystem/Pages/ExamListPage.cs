@@ -3,6 +3,8 @@ using LGSTrackingSystem.Pages;
 using LGSTrackingSystem.Services.Services;
 using LiveCharts.Wpf;
 using LiveCharts;
+using System.ComponentModel;
+using LGSTrackingSystem.Core.DTOs;
 
 namespace LGSTrackingSystem.UI.Pages
 {
@@ -17,7 +19,6 @@ namespace LGSTrackingSystem.UI.Pages
             _studentId = studentId;
             _studentService = new StudentService();
             _examService = new ExamService();
-
             InitializeComponent();
         }
 
@@ -28,9 +29,9 @@ namespace LGSTrackingSystem.UI.Pages
                 var _student = await _studentService.GetStudentByIdAsync(_studentId);
                 this.Text = $"{_student?.FirstName} {_student?.LastName}'s Exams";
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Student could not found");
+                MessageBox.Show($"Student could not found  \n{ex}");
                 throw;
             }
             await LoadExams();
@@ -52,16 +53,12 @@ namespace LGSTrackingSystem.UI.Pages
                 examPage.Text = "Add Exam";
                 examPage.ShowDialog();
                 await LoadExams();
+                await LoadChartData();
             }
             catch (Exception)
             {
                 throw;
             }
-
-        }
-
-        private void editExamToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -84,10 +81,13 @@ namespace LGSTrackingSystem.UI.Pages
                 }
 
                 _examService.DeleteExam(exam);
+                MessageBox.Show("Exam deleted successfully");
                 await LoadExams();
+                await LoadChartData();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show($"Exam could not deleted:\n{ex}");
                 throw;
             }
         }
@@ -166,21 +166,23 @@ namespace LGSTrackingSystem.UI.Pages
             try
             {
                 dgwExamList.DataSource = null;
+
                 var exams = await _studentService.GetExamsFromStudent(_studentId);
-                var examsToShow = exams.Select(e => new
-                {
+                var examsToShow = new BindingList<ExamDisplayDTO>(exams.Select(e => new ExamDisplayDTO
+                (
                     e.Id,
                     e.ExamDate,
                     e.ExamName,
                     e.TotalNet,
                     e.Score
-                }).ToList();
+                )).ToList());
                 dgwExamList.DataSource = examsToShow;
                 dgwExamList.Columns["Id"].Visible = false;
+
             }
             catch (Exception)
             {
-                MessageBox.Show("Exams could not list");
+                MessageBox.Show("Exams could not list \n{ex}");
                 throw;
             }
         }
@@ -194,11 +196,7 @@ namespace LGSTrackingSystem.UI.Pages
         private async Task GeneralChart()
         {
             var exams = await _studentService.GetExamsFromStudent(_studentId);
-            if (exams == null || !exams.Any())
-            {
-                MessageBox.Show("No exams found for this student.");
-                return;
-            }
+            if (exams == null || !exams.Any()) return;
 
             var chartData = exams
                 .OrderBy(e => e.ExamDate)
@@ -213,6 +211,7 @@ namespace LGSTrackingSystem.UI.Pages
 
             var maxValue = values.Max();
             var maxYAxis = Math.Min(90, (int)(Math.Ceiling(maxValue / 5.0) * 5));
+            maxYAxis = maxYAxis <= 0 ? 5 : maxYAxis;
 
             var yLabels = new List<string>();
             for (int i = 0; i <= maxYAxis; i += 5)
@@ -263,11 +262,7 @@ namespace LGSTrackingSystem.UI.Pages
         private async Task LessionChart()
         {
             var exams = await _studentService.GetExamsFromStudent(_studentId);
-            if (exams == null || !exams.Any())
-            {
-                MessageBox.Show("No exams found for this student.");
-                return;
-            }
+            if (exams == null || !exams.Any()) return;
 
             var chartData = exams
                 .OrderBy(e => e.ExamDate)
@@ -316,6 +311,7 @@ namespace LGSTrackingSystem.UI.Pages
             var maxYAxis = Math.Min(90, (int)(Math.Ceiling(maxValue / 5.0) * 5));
             var minValue = allVisibleValues.Any() ? allVisibleValues.Min() : 0;
             var minYAxis = Math.Min(0, (int)(Math.Floor(minValue / 5.0) * 5));
+            maxYAxis = maxYAxis <= 0 ? 5 : maxYAxis;
 
             var seriesCollection = new SeriesCollection();
 

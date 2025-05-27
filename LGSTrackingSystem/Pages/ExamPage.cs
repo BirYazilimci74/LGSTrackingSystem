@@ -234,6 +234,7 @@ namespace LGSTrackingSystem.Pages
                                     ref double? totalNet,
                                     ref double? examScore)
         {
+            bool canCalculate = true;
             lblMsg.Text = string.Empty;
 
             var mathCorrect = Convert.ToInt32(numMathCorrect.Value);
@@ -241,8 +242,8 @@ namespace LGSTrackingSystem.Pages
             mathNet = _examService.CheckAndCalculateNet(mathCorrect, mathIncorrect, 20);
             if (mathNet is null)
             {
-                lblMsg.Text += "\nTotal math question should be less that 20";
-                return false;
+                lblMsg.Text += "Total math question should be less that 20";
+                canCalculate = false;
             }
 
             var scienceCorrect = Convert.ToInt32(numScienceCorrect.Value);
@@ -250,8 +251,8 @@ namespace LGSTrackingSystem.Pages
             scienceNet = _examService.CheckAndCalculateNet(scienceCorrect, scienceIncorrect, 20);
             if (scienceNet is null)
             {
-                lblMsg.Text += "\nTotal science question should be less that 20";
-                return false;
+                lblMsg.Text += "Total science question should be less that 20\n";
+                canCalculate = false;
             }
 
             var turkishCorrect = Convert.ToInt32(numTurkishCorrect.Value);
@@ -259,8 +260,8 @@ namespace LGSTrackingSystem.Pages
             turkishNet = _examService.CheckAndCalculateNet(turkishCorrect, turkishIncorrect, 20);
             if (turkishNet is null)
             {
-                lblMsg.Text += "\nTotal turkish question should be less that 20";
-                return false;
+                lblMsg.Text += "Total turkish question should be less that 20\n";
+                canCalculate = false;
             }
 
             var historyCorrect = Convert.ToInt32(numHistoryCorrect.Value);
@@ -268,8 +269,8 @@ namespace LGSTrackingSystem.Pages
             historyNet = _examService.CheckAndCalculateNet(historyCorrect, historyIncorrect, 10);
             if (historyNet is null)
             {
-                lblMsg.Text += "\nTotal history question should be less that 10";
-                return false;
+                lblMsg.Text += "Total history question should be less that 10\n";
+                canCalculate = false;
             }
 
             var religionCorrect = Convert.ToInt32(numReligionCorrect.Value);
@@ -277,8 +278,8 @@ namespace LGSTrackingSystem.Pages
             religionNet = _examService.CheckAndCalculateNet(religionCorrect, religionIncorrect, 10);
             if (religionNet is null)
             {
-                lblMsg.Text += "\nTotal religion question should be less that 10";
-                return false;
+                lblMsg.Text += "Total religion question should be less that 10\n";
+                canCalculate = false;
             }
 
             var englishCorrect = Convert.ToInt32(numEnglishCorrect.Value);
@@ -286,9 +287,11 @@ namespace LGSTrackingSystem.Pages
             englishNet = _examService.CheckAndCalculateNet(englishCorrect, englishIncorrect, 10);
             if (englishNet is null)
             {
-                lblMsg.Text += "\nTotal english question should be less that 10";
-                return false;
+                lblMsg.Text += "Total english question should be less that 10\n";
+                canCalculate = false;
             }
+
+            if (!canCalculate) return false;
 
             var score = (mathNet * 4) +
                         (scienceNet * 4) +
